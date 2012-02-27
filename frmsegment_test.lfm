@@ -1,0 +1,108 @@
+object frmMain: TfrmMain
+  Left = 220
+  Height = 388
+  Top = 123
+  Width = 651
+  Caption = 'Trans Segmenter Demo'
+  ClientHeight = 388
+  ClientWidth = 651
+  OnCreate = FormCreate
+  LCLVersion = '0.9.31'
+  object btnDoSegment: TButton
+    Left = 16
+    Height = 25
+    Top = 353
+    Width = 75
+    Anchors = [akLeft, akBottom]
+    Caption = 'Segment'
+    OnClick = btnDoSegmentClick
+    TabOrder = 0
+  end
+  object leLang: TLabeledEdit
+    Left = 72
+    Height = 20
+    Top = 8
+    Width = 24
+    EditLabel.AnchorSideTop.Control = leLang
+    EditLabel.AnchorSideTop.Side = asrCenter
+    EditLabel.AnchorSideRight.Control = leLang
+    EditLabel.AnchorSideBottom.Control = leLang
+    EditLabel.AnchorSideBottom.Side = asrBottom
+    EditLabel.Left = 20
+    EditLabel.Height = 13
+    EditLabel.Top = 12
+    EditLabel.Width = 49
+    EditLabel.Caption = 'Language'
+    EditLabel.ParentColor = False
+    LabelPosition = lpLeft
+    TabOrder = 1
+    Text = 'JA'
+  end
+  object PairSplitter1: TPairSplitter
+    Cursor = crVSplit
+    Left = 16
+    Height = 312
+    Top = 32
+    Width = 624
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Position = 150
+    SplitterType = pstVertical
+    object psBlock: TPairSplitterSide
+      Cursor = crArrow
+      Left = 0
+      Height = 150
+      Top = 0
+      Width = 624
+      ClientWidth = 624
+      ClientHeight = 150
+      object mmBlock: TMemo
+        Left = 0
+        Height = 133
+        Top = 17
+        Width = 624
+        Align = alClient
+        Anchors = [akTop, akLeft, akRight]
+        OnChange = mmBlockChange
+        TabOrder = 0
+      end
+      object dbBlock: TDividerBevel
+        Left = 0
+        Height = 17
+        Top = 0
+        Width = 624
+        Caption = 'Input Text'
+        Align = alTop
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+    object psSegments: TPairSplitterSide
+      Cursor = crArrow
+      Left = 0
+      Height = 157
+      Top = 155
+      Width = 624
+      ClientWidth = 624
+      ClientHeight = 157
+      object lbSegments: TListBox
+        Left = 0
+        Height = 140
+        Top = 17
+        Width = 624
+        Align = alClient
+        ItemHeight = 0
+        TabOrder = 0
+      end
+      object dbSegments: TDividerBevel
+        Left = 0
+        Height = 17
+        Top = 0
+        Width = 624
+        Caption = 'Sentences'
+        Align = alTop
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+  end
+end

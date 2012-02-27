@@ -1,0 +1,49 @@
+object Form1: TForm1
+  Left = 958
+  Height = 109
+  Top = 201
+  Width = 349
+  Caption = 'Pattern Test GUI'
+  ClientHeight = 109
+  ClientWidth = 349
+  LCLVersion = '0.9.31'
+  object ebInput: TEdit
+    Left = 8
+    Height = 22
+    Top = 38
+    Width = 176
+    Anchors = [akTop, akLeft, akRight]
+    OnChange = ebInputChange
+    TabOrder = 0
+    Text = 'I want a Kitty'
+  end
+  object btnJikou: TButton
+    Left = 200
+    Height = 25
+    Top = 32
+    Width = 136
+    Anchors = [akTop, akRight]
+    Caption = 'Auto Pattern Lookup'
+    OnClick = btnJikouClick
+    TabOrder = 1
+  end
+  object ebResult: TEdit
+    Left = 8
+    Height = 22
+    Top = 67
+    Width = 176
+    Anchors = [akTop, akLeft, akRight]
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 200
+    Height = 25
+    Top = 64
+    Width = 136
+    Anchors = [akTop, akRight]
+    Caption = 'Raw Pattern Lookup'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+end

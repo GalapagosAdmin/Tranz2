@@ -1,0 +1,115 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TForm1','FORMDATA',[
+  'TPF0'#6'TForm1'#5'Form1'#4'Left'#3' '#1#6'Height'#3#207#1#3'Top'#2'u'#5'Widt'
+  +'h'#3'\'#3#7'Caption'#6#14'SQLite DB Test'#12'ClientHeight'#3#207#1#11'Clien'
+  +'tWidth'#3'\'#3#4'Menu'#7#9'MainMenu1'#10'OnActivate'#7#12'FormActivate'#7'O'
+  +'nClose'#7#9'FormClose'#8'OnCreate'#7#10'FormCreate'#10'LCLVersion'#6#6'0.9.'
+  +'31'#0#7'TDBGrid'#7'DBGrid1'#4'Left'#2#0#6'Height'#3'~'#1#3'Top'#2'B'#5'Widt'
+  +'h'#2'y'#5'Align'#7#6'alLeft'#5'Color'#7#8'clWindow'#7'Columns'#14#1#13'Titl'
+  +'e.Caption'#6#10'TABLE NAME'#9'FieldName'#6#10'TABLE_NAME'#0#0#10'DataSource'
+  +#7#7'dsTable'#7'Options'#11#8'dgTitles'#11'dgIndicator'#14'dgColumnResize'#12
+  +'dgColumnMove'#10'dgColLines'#10'dgRowLines'#6'dgTabs'#21'dgAlwaysShowSelect'
+  +'ion'#15'dgConfirmDelete'#14'dgCancelOnExit'#0#8'ReadOnly'#9#8'TabOrder'#2#0
+  +#0#0#6'TPanel'#6'Panel1'#4'Left'#2#0#6'Height'#2'B'#3'Top'#2#0#5'Width'#3'\'
+  +#3#5'Align'#7#5'alTop'#12'ClientHeight'#2'B'#11'ClientWidth'#3'\'#3#8'TabOrd'
+  +'er'#2#1#7'OnClick'#7#11'Panel1Click'#0#12'TSpeedButton'#12'SpeedButton1'#4
+  +'Left'#3'3'#3#6'Height'#2#22#3'Top'#2#16#5'Width'#2#23#7'Anchors'#11#5'akTop'
+  +#7'akRight'#0#10'Glyph.Data'#10':'#4#0#0'6'#4#0#0'BM6'#4#0#0#0#0#0#0'6'#0#0#0
+  +'('#0#0#0#16#0#0#0#16#0#0#0#1#0' '#0#0#0#0#0#0#4#0#0'd'#0#0#0'd'#0#0#0#0#0#0
+  +#0#0#0#0#0#255#255#255#0#255#255#255#0#255#255#255#0#0#0#0'!'#0#129#151#203#0
+  +'5>V'#0#0#0','#0#0#0''''#0#0#0'!'#0#0#0#26#0#0#0#19#0#0#0#13't='#4#157't<'#4
+  +'^T.'#7#0'[5'#12#0#255#255#255#0#255#255#255#0#255#255#255#0#0#0#0#17#0#129
+  +#151#144#0#131#154#188#0'FR8'#0#0#0#20#0#0#0#17#0#0#0#13#0#0#0#10#0#0#0#7#166
+  +'\'#13#205#167'\'#13#205#169'^'#14'\'#181'j'#24#0#255#255#255#0#255#255#255#0
+  +#255#255#255#0#0'DO'#0#0#136#159'S'#5#149#171#206#1#138#160#178#0'hy'#24#183
+  +'l'#25#153#181'j'#24#204#181'j'#24#204#181'j'#24#204#181'j'#24#204#255#197'8'
+  +#255#181'j'#24#204#183'l'#25'\'#255#255#255#0#255#255#255#0#255#255#255#0#0
+  +#141#164#0#0#141#164#27#4#150#172#200#23#188#208#229#0#141#164#163#193'y%'
+  +#207#255#227#146#255#255#213'j'#255#255#209']'#255#255#209']'#255#255#209']'
+  +#255#255#216's'#255#195'y#'#204#255#255#255#0#255#255#255#0#255#255#255#0#0
+  +#145#168#0#0#145#168#0#0#147#170#161'('#209#226#242#24#183#203#222#140#138'W'
+  +#221#209#135'/'#205#210#135'.'#204#210#135'.'#204#210#135'.'#204#255#229#151
+  +#255#210#135'.'#204#208#133'-\'#255#255#255#0#255#255#255#0#255#255#255#0#3
+  +#157#181#0#1#152#175#0#1#152#175'h&'#188#207#223'='#216#232#255#26#176#197
+  +#212#1#152#175'|k'#146'q'#1#217#142'4'#0#223#148'8'#204#223#148'8'#204#222
+  +#147'7\'#210#135'.'#0#255#255#255#0#255#255#255#0#255#255#255#0#3#159#182#0#2
+  +#152#175#0#2#153#176'4'#25#172#192#202'J'#209#224#255'L'#209#224#254#25#171
+  +#192#203#1#156#179'ht'#156'y'#0#231#156'>'#153#231#156'>\'#223#148'8'#0#210
+  +#135'.'#0#255#255#255#0#255#255#255#0#255#255#255#0#3#158#181#192#2#150#172
+  +#195#2#142#165#198#1#138#161#200'['#207#221#255'E'#197#214#255'['#206#220#251
+  +#21#169#190#196#1#160#184'T'#175#159'^'#0#232#157'?'#0#223#148'8'#0#210#135
+  +'.'#0#255#255#255#0#255#255#255#0#255#255#255#0#1#163#187'kT'#203#219#218#138
+  +#234#245#255'~'#229#242#255'~'#229#242#255'}'#229#242#255'~'#229#242#255'~'
+  +#227#239#248#20#173#195#190#1#164#188'?'#1#164#188#0#1#164#188#0#1#164#188#0
+  +#255#255#255#0#255#255#255#0#255#255#255#0#1#166#190#30#20#175#197#186#143
+  +#235#245#254'f'#221#238#255#132#231#243#255#1#166#190#180#1#166#190#180#1#166
+  +#190#180#1#166#190#180#1#166#190#180#1#166#190#0#1#166#190#0#1#166#190#0#255
+  +#255#255#0#255#255#255#0#255#255#255#0#1#169#193#0#1#169#194#130'v'#221#232
+  +#227'q'#225#240#255'y'#228#242#255#129#219#229#241#2#151#174#194#2#164#188'0'
+  +#1#167#191#0#1#167#191#0#1#167#191#0#1#167#191#0#1#167#191#0#255#255#255#0
+  +#255#255#255#0#255#255#255#0#1#172#196#0#1#172#196'6/'#192#211#192#153#239
+  +#249#255'r'#227#244#255#131#232#246#255#137#226#235#240#3#163#186#190#3#163
+  +#186'0'#2#165#189#0#2#169#193#0#1#173#197#0#1#173#197#0#255#255#255#0#255#255
+  +#255#0#255#255#255#0#1#174#199#0#1#174#199#2#1#175#200#150#155#238#245#237
+  +#127#233#250#255'~'#233#250#255#142#238#251#255#143#229#237#239#3#163#186#189
+  +#3#163#186'0'#2#171#195#0#1#178#203#0#1#178#203#0#255#255#255#0#255#255#255#0
+  +#255#255#255#0#1#176#201#0#1#176#201#0#1#177#202'MN'#207#223#202#177#248#255
+  +#255#168#245#254#255#167#245#254#255#181#249#255#255#147#231#238#239#3#163
+  +#186#189#2#171#195'0'#1#178#203#0#1#178#203#0#255#255#255#0#255#255#255#0#255
+  +#255#255#0#1#178#203#0#1#178#203#0#1#178#203#11#1#179#204#171#1#179#204#171#1
+  +#179#204#171#1#179#204#171#1#179#204#171#1#179#204#171#1#179#204#171#1#179
+  +#204#171#1#179#204#0#1#179#204#0#255#255#255#0#255#255#255#0#255#255#255#0
+  +#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255
+  +#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255#255#0#255#255
+  +#255#0#255#255#255#0#255#255#255#0#9'NumGlyphs'#2#0#7'OnClick'#7#17'SpeedBut'
+  +'ton1Click'#0#0#12'TLabeledEdit'#8'leDBName'#4'Left'#2#8#6'Height'#2#22#3'To'
+  +'p'#2#24#5'Width'#3#136#0' EditLabel.AnchorSideLeft.Control'#7#8'leDBName"Ed'
+  ,'itLabel.AnchorSideBottom.Control'#7#8'leDBName'#14'EditLabel.Left'#2#8#16'E'
+  +'ditLabel.Height'#2#21#13'EditLabel.Top'#2#0#15'EditLabel.Width'#2'Z'#17'Edi'
+  +'tLabel.Caption'#6#14'Database File:'#21'EditLabel.ParentColor'#8#7'Enabled'
+  +#8#8'ReadOnly'#9#8'TabOrder'#2#0#0#0#7'TButton'#10'BtnNoTrans'#4'Left'#3#152
+  +#0#6'Height'#2#25#3'Top'#2#8#5'Width'#3#132#0#7'Caption'#6#17'Find Untransla'
+  +'ted'#7'OnClick'#7#15'BtnNoTransClick'#8'TabOrder'#2#1#0#0#7'TButton'#12'btn'
+  +'SrcOrphan'#4'Left'#3' '#1#6'Height'#2#25#3'Top'#2#8#5'Width'#3#136#0#7'Capt'
+  +'ion'#6#17'Source CR Orphans'#7'OnClick'#7#17'btnSrcOrphanClick'#8'TabOrder'
+  +#2#2#0#0#7'TButton'#15'btnDestCROrphan'#4'Left'#3#176#1#6'Height'#2#25#3'Top'
+  +#2#8#5'Width'#3#128#0#7'Caption'#6#15'Dest CR Orphans'#7'OnClick'#7#20'btnDe'
+  +'stCROrphanClick'#8'TabOrder'#2#3#0#0#0#10'TStatusBar'#10'StatusBar1'#4'Left'
+  +#2#0#6'Height'#2#15#3'Top'#3#192#1#5'Width'#3'\'#3#6'Panels'#14#0#0#0#9'TSpl'
+  +'itter'#9'Splitter1'#4'Left'#2'y'#6'Height'#3'~'#1#3'Top'#2'B'#5'Width'#2#5#0
+  +#0#6'TPanel'#12'pnlRightSide'#4'Left'#2'~'#6'Height'#3'~'#1#3'Top'#2'B'#5'Wi'
+  +'dth'#3#222#2#5'Align'#7#8'alClient'#12'ClientHeight'#3'~'#1#11'ClientWidth'
+  +#3#222#2#8'TabOrder'#2#4#0#5'TMemo'#6'mQuery'#4'Left'#2#1#6'Height'#2'Z'#3'T'
+  +'op'#2#1#5'Width'#3#220#2#5'Align'#7#5'alTop'#8'TabOrder'#2#0#0#0#6'TPanel'
+  +#12'pnlQueryPane'#4'Left'#2#1#6'Height'#3#23#1#3'Top'#2'f'#5'Width'#3#220#2#5
+  +'Align'#7#8'alClient'#7'Caption'#6#12'pnlQueryPane'#12'ClientHeight'#3#23#1
+  +#11'ClientWidth'#3#220#2#8'TabOrder'#2#1#0#12'TDBNavigator'#12'DBNavigator1'
+  +#4'Left'#2#1#6'Height'#2#25#3'Top'#2#0#5'Width'#3#241#0#10'BevelOuter'#7#6'b'
+  +'vNone'#29'ChildSizing.EnlargeHorizontal'#7#14'crsScaleChilds'#27'ChildSizin'
+  +'g.EnlargeVertical'#7#14'crsScaleChilds'#28'ChildSizing.ShrinkHorizontal'#7
+  +#14'crsScaleChilds'#26'ChildSizing.ShrinkVertical'#7#14'crsScaleChilds'#18'C'
+  +'hildSizing.Layout'#7#29'cclLeftToRightThenTopToBottom'#27'ChildSizing.Contr'
+  +'olsPerLine'#2'd'#12'ClientHeight'#2#25#11'ClientWidth'#3#241#0#10'DataSourc'
+  +'e'#7#7'dsQuery'#8'TabOrder'#2#0#0#0#7'TDBGrid'#7'DBGrid2'#4'Left'#2#1#6'Hei'
+  +'ght'#3#254#0#3'Top'#2#24#5'Width'#3#218#2#5'Align'#7#8'alBottom'#7'Anchors'
+  +#11#5'akTop'#6'akLeft'#7'akRight'#8'akBottom'#0#5'Color'#7#8'clWindow'#7'Col'
+  +'umns'#14#0#10'DataSource'#7#7'dsQuery'#8'TabOrder'#2#1#0#0#0#9'TSplitter'#12
+  +'splQueryPane'#6'Cursor'#7#8'crVSplit'#4'Left'#2#1#6'Height'#2#11#3'Top'#2'['
+  +#5'Width'#3#220#2#5'Align'#7#5'alTop'#12'ResizeAnchor'#7#5'akTop'#0#0#0#12'T'
+  +'ZConnection'#12'ZConnection1'#8'Protocol'#6#8'sqlite-3'#8'Database'#6'</Use'
+  +'rs/shiruba/Desktop/Dropbox/Develop/DBTest/testdb.sqlite3'#16'DesignConnecti'
+  +'on'#9#12'SQLHourGlass'#9#4'left'#3'X'#2#3'top'#2#16#0#0#7'TZTable'#7'ZTable'
+  +'1'#10'Connection'#7#12'ZConnection1'#14'AutoCalcFields'#8#4'left'#3#248#2#3
+  +'top'#2#16#0#0#7'TZQuery'#7'ZQuery1'#10'Connection'#7#12'ZConnection1'#14'Au'
+  +'toCalcFields'#8#11'SQL.Strings'#1#6#27'select * from SQLITE_MASTER'#0#6'Par'
+  +'ams'#14#0#4'left'#3#184#2#3'top'#2#16#0#0#11'TDatasource'#7'dsTable'#7'Data'
+  +'Set'#7#13'ZSQLMetadata1'#12'OnDataChange'#7#17'dsTableDataChange'#4'left'#3
+  +#152#2#3'top'#2#16#0#0#11'TOpenDialog'#11'OpenDialog1'#4'left'#3#24#3#3'top'
+  +#2#16#0#0#9'TMainMenu'#9'MainMenu1'#4'left'#3'8'#2#3'top'#2#16#0#9'TMenuItem'
+  +#6'mhFile'#7'Caption'#6#5'&File'#0#9'TMenuItem'#8'miDBOpen'#7'Caption'#6#17
+  +'&Open Database...'#7'OnClick'#7#13'miDBOpenClick'#0#0#0#0#11'TDatasource'#7
+  +'dsQuery'#7'DataSet'#7#7'ZQuery1'#4'left'#3#216#2#3'top'#2#16#0#0#13'TZSQLMe'
+  +'tadata'#13'ZSQLMetadata1'#10'Connection'#7#12'ZConnection1'#14'AutoCalcFiel'
+  +'ds'#8#12'MetadataType'#7#8'mdTables'#4'left'#3'x'#2#3'top'#2#16#0#0#0
+]);

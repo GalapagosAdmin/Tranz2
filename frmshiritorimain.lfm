@@ -1,0 +1,81 @@
+object frmMain: TfrmMain
+  Left = 696
+  Height = 240
+  Top = 160
+  Width = 340
+  Caption = 'Shiritori'
+  ClientHeight = 240
+  ClientWidth = 340
+  LCLVersion = '0.9.31'
+  object lblWord: TLabel
+    Left = 8
+    Height = 46
+    Top = 16
+    Width = 323
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'しりとり'
+    Font.Height = -45
+    ParentColor = False
+    ParentFont = False
+  end
+  object ebInput: TEdit
+    Left = 16
+    Height = 51
+    Top = 168
+    Width = 232
+    Font.Height = -43
+    OnChange = ebInputChange
+    ParentFont = False
+    TabOrder = 0
+  end
+  object bbGo: TBitBtn
+    Left = 256
+    Height = 51
+    Top = 168
+    Width = 75
+    Caption = 'Go'
+    Default = True
+    Enabled = False
+    OnClick = bbGoClick
+    TabOrder = 1
+  end
+  object bbStartOver: TBitBtn
+    Left = 8
+    Height = 58
+    Top = 168
+    Width = 324
+    Caption = 'もう一度'
+    Font.Height = -32
+    OnClick = bbStartOverClick
+    ParentFont = False
+    TabOrder = 2
+    Visible = False
+  end
+  object lblMake: TLabel
+    Left = 8
+    Height = 156
+    Top = 4
+    Width = 324
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoSize = False
+    Caption = '   誰かの負け'
+    Font.Height = -44
+    Font.Orientation = -250
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object ActionList1: TActionList
+    left = 256
+    top = 21
+    object acComputerLoses: TAction
+      Caption = 'acComputerLoses'
+      OnExecute = acComputerLosesExecute
+    end
+    object acPlayerLoses: TAction
+      Caption = 'acPlayerLoses'
+      OnExecute = acPlayerLosesExecute
+    end
+  end
+end

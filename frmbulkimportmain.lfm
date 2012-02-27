@@ -1,0 +1,64 @@
+object frmBIMain: TfrmBIMain
+  Left = 426
+  Height = 410
+  Top = 149
+  Width = 673
+  Caption = 'T2: Bulk Term Import'
+  ClientHeight = 410
+  ClientWidth = 673
+  OnShow = FormShow
+  LCLVersion = '0.9.31'
+  object mmTerms: TMemo
+    Left = 8
+    Height = 276
+    Top = 56
+    Width = 661
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object cbSrcLang: TComboBox
+    Left = 40
+    Height = 20
+    Top = 8
+    Width = 40
+    ItemHeight = 12
+    TabOrder = 1
+    Text = 'JA'
+  end
+  object ProgressBar1: TProgressBar
+    Left = 8
+    Height = 20
+    Top = 379
+    Width = 661
+    Anchors = [akLeft, akRight]
+    TabOrder = 2
+    Visible = False
+  end
+  object bbImport: TBitBtn
+    Left = 594
+    Height = 30
+    Top = 340
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Import'
+    OnClick = bbImportClick
+    TabOrder = 3
+  end
+  object lblTerms: TLabel
+    Left = 8
+    Height = 13
+    Top = 36
+    Width = 35
+    Caption = 'Terms:'
+    ParentColor = False
+  end
+  object lblLang: TLabel
+    Left = 10
+    Height = 13
+    Top = 13
+    Width = 29
+    Caption = 'Lang.:'
+    ParentColor = False
+  end
+end

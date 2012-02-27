@@ -1,0 +1,132 @@
+digraph output {
+segment_test [shape=box]
+segment_test->interfaces
+interfaces [color=red]
+segment_test->forms
+forms [color=red]
+segment_test->lazcontrols
+lazcontrols [color=red]
+segment_test->frmsegment_test
+node [shape=ellipse]
+edge [style=dotted]
+frmsegment_test->classes
+classes [color=red]
+edge [style=dotted]
+frmsegment_test->sysutils
+sysutils [color=red]
+edge [style=dotted]
+frmsegment_test->fileutil
+fileutil [color=red]
+edge [style=dotted]
+frmsegment_test->dividerbevel
+dividerbevel [color=red]
+edge [style=dotted]
+frmsegment_test->forms
+edge [style=dotted]
+frmsegment_test->controls
+controls [color=red]
+edge [style=dotted]
+frmsegment_test->graphics
+graphics [color=red]
+edge [style=dotted]
+frmsegment_test->dialogs
+dialogs [color=red]
+edge [style=dotted]
+frmsegment_test->stdctrls
+stdctrls [color=red]
+edge [style=dotted]
+frmsegment_test->extctrls
+extctrls [color=red]
+edge [style=dotted]
+frmsegment_test->pairsplitter
+pairsplitter [color=red]
+edge [style=solid]
+frmsegment_test->tosegment
+node [shape=ellipse]
+edge [style=dotted]
+tosegment->classes
+edge [style=dotted]
+tosegment->sysutils
+edge [style=dotted]
+tosegment->lclproc
+lclproc [color=red]
+edge [style=dotted]
+tosegment->transconst
+node [shape=ellipse]
+edge [style=dotted]
+transconst->classes
+edge [style=dotted]
+transconst->sysutils
+edge [style=solid]
+tosegment->dbugintf
+dbugintf [color=red]
+edge [style=solid]
+tosegment->transdb
+node [shape=ellipse]
+edge [style=dotted]
+transdb->classes
+edge [style=dotted]
+transdb->sysutils
+edge [style=dotted]
+transdb->transconst
+edge [style=solid]
+transdb->md5
+md5 [color=red]
+edge [style=solid]
+transdb->db
+db [color=red]
+edge [style=solid]
+transdb->zconnection
+zconnection [color=red]
+edge [style=solid]
+transdb->zdataset
+zdataset [color=red]
+edge [style=solid]
+transdb->pattern
+node [shape=ellipse]
+edge [style=dotted]
+pattern->classes
+edge [style=dotted]
+pattern->sysutils
+edge [style=dotted]
+pattern->transconst
+edge [style=solid]
+pattern->transtoken
+node [shape=ellipse]
+edge [style=dotted]
+transtoken->classes
+edge [style=dotted]
+transtoken->sysutils
+edge [style=dotted]
+transtoken->transconst
+edge [style=solid]
+transtoken->transdb
+edge [style=solid]
+pattern->transtokenremix
+node [shape=ellipse]
+edge [style=dotted]
+transtokenremix->classes
+edge [style=dotted]
+transtokenremix->sysutils
+edge [style=dotted]
+transtokenremix->transconst
+edge [style=solid]
+transtokenremix->transdb
+edge [style=solid]
+pattern->transdb
+edge [style=solid]
+pattern->dbugintf
+edge [style=solid]
+transdb->dbugintf
+edge [style=solid]
+transdb->lclproc
+edge [style=solid]
+transdb->defaulttranslator
+defaulttranslator [color=red]
+edge [style=solid]
+transdb->fileutil
+edge [style=solid]
+frmsegment_test->transconst
+segment_test->zcomponent
+zcomponent [color=red]
+}

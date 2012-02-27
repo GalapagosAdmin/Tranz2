@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="11">
+      <Unit0>
+        <Filename Value="WordStat1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="WordStat1"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="69" Y="12"/>
+        <UsageCount Value="45"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="frmwordstat_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmWordStat"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmWordStat_Unit"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="84"/>
+        <CursorPos X="76" Y="99"/>
+        <UsageCount Value="45"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="transtoken.pas"/>
+        <UnitName Value="TransToken"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="218"/>
+        <CursorPos X="74" Y="229"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="transdb.pas"/>
+        <UnitName Value="transdb"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="411"/>
+        <CursorPos X="3" Y="417"/>
+        <UsageCount Value="22"/>
+        <Bookmarks Count="1">
+          <Item0 X="4" Y="1232" ID="0"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="C:\lazarus\lcl\include\listitem.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="719"/>
+        <CursorPos X="19" Y="748"/>
+        <UsageCount Value="16"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\lcl\include\listitems.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="218"/>
+        <CursorPos X="57" Y="363"/>
+        <UsageCount Value="16"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="transconst.pas"/>
+        <UnitName Value="TransConst"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="136"/>
+        <CursorPos X="41" Y="135"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\zeos_lib\src\component\ZAbstractRODataset.pas"/>
+        <UnitName Value="ZAbstractRODataset"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="660"/>
+        <CursorPos X="1" Y="672"/>
+        <UsageCount Value="12"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\zeos_lib\src\dbc\ZDbcSqLiteUtils.pas"/>
+        <UnitName Value="ZDbcSqLiteUtils"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="157"/>
+        <CursorPos X="51" Y="228"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="transtokenremix.pas"/>
+        <UnitName Value="TransTokenRemix"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="196"/>
+        <CursorPos X="14" Y="124"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="TransFW.app"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit10>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="transtoken.pas"/>
+        <Caret Line="166" Column="29" TopLine="145"/>
+      </Position1>
+      <Position2>
+        <Filename Value="transtoken.pas"/>
+        <Caret Line="181" Column="77" TopLine="166"/>
+      </Position2>
+      <Position3>
+        <Filename Value="frmwordstat_unit.pas"/>
+        <Caret Line="65" Column="13" TopLine="53"/>
+      </Position3>
+      <Position4>
+        <Filename Value="frmwordstat_unit.pas"/>
+        <Caret Line="124" Column="15" TopLine="107"/>
+      </Position4>
+      <Position5>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="404" Column="18" TopLine="392"/>
+      </Position5>
+      <Position6>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="2330" Column="12" TopLine="2324"/>
+      </Position6>
+      <Position7>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="1100" Column="17" TopLine="1094"/>
+      </Position7>
+      <Position8>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="2330" Column="7" TopLine="2318"/>
+      </Position8>
+      <Position9>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="1103" Column="13" TopLine="1097"/>
+      </Position9>
+      <Position10>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="2330" Column="8" TopLine="2318"/>
+      </Position10>
+      <Position11>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="1103" Column="14" TopLine="1097"/>
+      </Position11>
+      <Position12>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="528" Column="102" TopLine="518"/>
+      </Position12>
+      <Position13>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="6" Column="113" TopLine="1"/>
+      </Position13>
+      <Position14>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="459" Column="61" TopLine="439"/>
+      </Position14>
+      <Position15>
+        <Filename Value="transtoken.pas"/>
+        <Caret Line="86" Column="88" TopLine="66"/>
+      </Position15>
+      <Position16>
+        <Filename Value="frmwordstat_unit.pas"/>
+        <Caret Line="85" Column="62" TopLine="81"/>
+      </Position16>
+      <Position17>
+        <Filename Value="frmwordstat_unit.pas"/>
+        <Caret Line="86" Column="62" TopLine="82"/>
+      </Position17>
+      <Position18>
+        <Filename Value="frmwordstat_unit.pas"/>
+        <Caret Line="104" Column="74" TopLine="65"/>
+      </Position18>
+      <Position19>
+        <Filename Value="frmwordstat_unit.pas"/>
+        <Caret Line="84" Column="5" TopLine="65"/>
+      </Position19>
+      <Position20>
+        <Filename Value="transtoken.pas"/>
+        <Caret Line="334" Column="30" TopLine="322"/>
+      </Position20>
+      <Position21>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="1604" Column="17" TopLine="1597"/>
+      </Position21>
+      <Position22>
+        <Filename Value="frmwordstat_unit.pas"/>
+        <Caret Line="85" Column="1" TopLine="66"/>
+      </Position22>
+      <Position23>
+        <Filename Value="frmwordstat_unit.pas"/>
+        <Caret Line="6" Column="61" TopLine="2"/>
+      </Position23>
+      <Position24>
+        <Filename Value="frmwordstat_unit.pas"/>
+        <Caret Line="92" Column="53" TopLine="82"/>
+      </Position24>
+      <Position25>
+        <Filename Value="frmwordstat_unit.pas"/>
+        <Caret Line="94" Column="1" TopLine="83"/>
+      </Position25>
+      <Position26>
+        <Filename Value="frmwordstat_unit.pas"/>
+        <Caret Line="95" Column="5" TopLine="91"/>
+      </Position26>
+      <Position27>
+        <Filename Value="frmwordstat_unit.pas"/>
+        <Caret Line="49" Column="88" TopLine="41"/>
+      </Position27>
+      <Position28>
+        <Filename Value="transtoken.pas"/>
+        <Caret Line="288" Column="41" TopLine="285"/>
+      </Position28>
+      <Position29>
+        <Filename Value="transtoken.pas"/>
+        <Caret Line="320" Column="88" TopLine="308"/>
+      </Position29>
+      <Position30>
+        <Filename Value="transtoken.pas"/>
+        <Caret Line="359" Column="21" TopLine="344"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

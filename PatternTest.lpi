@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <Language Value=""/>
+      <CharSet Value=""/>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T 'Lazarus Run Output' -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="zcomponent"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="4">
+      <Unit0>
+        <Filename Value="PatternTest"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="35"/>
+        <CursorPos X="13" Y="50"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="pattern.pas"/>
+        <UnitName Value="pattern"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="99"/>
+        <CursorPos X="1" Y="111"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="transtoken.pas"/>
+        <UnitName Value="TransToken"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="75"/>
+        <CursorPos X="3" Y="20"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="transdb.pas"/>
+        <UnitName Value="transdb"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="198"/>
+        <CursorPos X="15" Y="213"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit3>
+    </Units>
+    <JumpHistory Count="23" HistoryIndex="22">
+      <Position1>
+        <Filename Value="PatternTest"/>
+        <Caret Line="52" Column="28" TopLine="40"/>
+      </Position1>
+      <Position2>
+        <Filename Value="PatternTest"/>
+        <Caret Line="11" Column="31" TopLine="1"/>
+      </Position2>
+      <Position3>
+        <Filename Value="transtoken.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position3>
+      <Position4>
+        <Filename Value="pattern.pas"/>
+        <Caret Line="74" Column="13" TopLine="69"/>
+      </Position4>
+      <Position5>
+        <Filename Value="pattern.pas"/>
+        <Caret Line="56" Column="50" TopLine="44"/>
+      </Position5>
+      <Position6>
+        <Filename Value="pattern.pas"/>
+        <Caret Line="87" Column="31" TopLine="70"/>
+      </Position6>
+      <Position7>
+        <Filename Value="pattern.pas"/>
+        <Caret Line="90" Column="20" TopLine="76"/>
+      </Position7>
+      <Position8>
+        <Filename Value="pattern.pas"/>
+        <Caret Line="91" Column="45" TopLine="76"/>
+      </Position8>
+      <Position9>
+        <Filename Value="pattern.pas"/>
+        <Caret Line="88" Column="42" TopLine="76"/>
+      </Position9>
+      <Position10>
+        <Filename Value="pattern.pas"/>
+        <Caret Line="91" Column="28" TopLine="76"/>
+      </Position10>
+      <Position11>
+        <Filename Value="pattern.pas"/>
+        <Caret Line="104" Column="62" TopLine="84"/>
+      </Position11>
+      <Position12>
+        <Filename Value="PatternTest"/>
+        <Caret Line="54" Column="10" TopLine="40"/>
+      </Position12>
+      <Position13>
+        <Filename Value="pattern.pas"/>
+        <Caret Line="105" Column="18" TopLine="94"/>
+      </Position13>
+      <Position14>
+        <Filename Value="PatternTest"/>
+        <Caret Line="50" Column="58" TopLine="38"/>
+      </Position14>
+      <Position15>
+        <Filename Value="pattern.pas"/>
+        <Caret Line="105" Column="1" TopLine="93"/>
+      </Position15>
+      <Position16>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="231" Column="1" TopLine="219"/>
+      </Position16>
+      <Position17>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="232" Column="1" TopLine="220"/>
+      </Position17>
+      <Position18>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="233" Column="1" TopLine="221"/>
+      </Position18>
+      <Position19>
+        <Filename Value="pattern.pas"/>
+        <Caret Line="111" Column="23" TopLine="98"/>
+      </Position19>
+      <Position20>
+        <Filename Value="PatternTest"/>
+        <Caret Line="78" Column="1" TopLine="61"/>
+      </Position20>
+      <Position21>
+        <Filename Value="pattern.pas"/>
+        <Caret Line="111" Column="1" TopLine="99"/>
+      </Position21>
+      <Position22>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="218" Column="1" TopLine="141"/>
+      </Position22>
+      <Position23>
+        <Filename Value="PatternTest"/>
+        <Caret Line="78" Column="1" TopLine="40"/>
+      </Position23>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="10"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <UseAnsiStrings Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Source Value="pattern.pas"/>
+        <Line Value="111"/>
+      </Item1>
+    </BreakPoints>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

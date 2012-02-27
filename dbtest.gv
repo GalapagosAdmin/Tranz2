@@ -1,0 +1,9 @@
+digraph output {
+dbtest [shape=box]
+dbtest->classes
+classes [color=red]
+dbtest->sysutils
+sysutils [color=red]
+dbtest->custapp
+custapp [color=red]
+}

@@ -1,0 +1,198 @@
+object fraDocProps: TfraDocProps
+  Left = 0
+  Height = 405
+  Top = 0
+  Width = 227
+  ClientHeight = 405
+  ClientWidth = 227
+  TabOrder = 0
+  DesignLeft = 1066
+  DesignTop = 244
+  object pnlHeader: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 227
+    Align = alTop
+    Alignment = taLeftJustify
+    BorderWidth = 5
+    Caption = 'Document Properties'
+    Color = clWhite
+    Font.CharSet = 4
+    Font.Height = -20
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object cbProjectName: TComboBox
+    Left = 16
+    Height = 20
+    Top = 80
+    Width = 200
+    Anchors = [akTop, akLeft, akRight]
+    Enabled = False
+    ItemHeight = 0
+    Style = csDropDownList
+    TabOrder = 1
+  end
+  object lblProject: TLabel
+    Left = 16
+    Height = 21
+    Top = 64
+    Width = 47
+    Alignment = taRightJustify
+    Caption = 'Project'
+    ParentColor = False
+  end
+  object lblFile: TLabel
+    Left = 16
+    Height = 21
+    Top = 120
+    Width = 67
+    Alignment = taRightJustify
+    Caption = 'Document'
+    ParentColor = False
+  end
+  object FileNameEdit1: TFileNameEdit
+    Left = 16
+    Height = 22
+    Top = 136
+    Width = 183
+    DialogOptions = []
+    FilterIndex = 0
+    HideDirectories = False
+    ButtonWidth = 23
+    NumGlyphs = 0
+    Anchors = [akTop, akLeft, akRight]
+    MaxLength = 0
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object lblDescription: TLabel
+    Left = 16
+    Height = 21
+    Top = 168
+    Width = 74
+    Alignment = taRightJustify
+    Caption = 'Description'
+    ParentColor = False
+  end
+  object mmDescription: TMemo
+    Left = 16
+    Height = 105
+    Top = 183
+    Width = 201
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    OnChange = mmDescriptionChange
+    TabOrder = 3
+  end
+  object lblSrcLang: TLabel
+    Left = 27
+    Height = 21
+    Top = 296
+    Width = 114
+    Alignment = taRightJustify
+    Anchors = [akLeft, akBottom]
+    Caption = 'Source Language'
+    ParentColor = False
+  end
+  object cbSrcLang: TComboBox
+    Left = 149
+    Height = 21
+    Top = 296
+    Width = 50
+    Anchors = [akLeft, akBottom]
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      'XX'
+      'YY'
+      'ZZ'
+    )
+    OnChange = cbSrcLangChange
+    TabOrder = 4
+    Text = 'XX'
+  end
+  object lblDestLang: TLabel
+    Left = 40
+    Height = 21
+    Top = 328
+    Width = 101
+    Alignment = taRightJustify
+    Anchors = [akLeft, akBottom]
+    Caption = 'Dest. Language'
+    ParentColor = False
+  end
+  object cbDestLang: TComboBox
+    Left = 147
+    Height = 21
+    Top = 328
+    Width = 52
+    Anchors = [akLeft, akBottom]
+    ItemHeight = 0
+    ItemIndex = 1
+    Items.Strings = (
+      'XX'
+      'YY'
+      'ZZ'
+    )
+    OnChange = cbDestLangChange
+    TabOrder = 5
+    Text = 'YY'
+  end
+  object bbCommitChanges: TBitBtn
+    Left = 142
+    Height = 30
+    Top = 365
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Commit'
+    Glyph.Data = {
+      36040000424D3604000000000000360000002800000010000000100000000100
+      2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF0039864003347E3A78FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF004191499C3B8842D2FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF004EA3579066B06EFF61AA68FF3D8B44FF37833EFF327B
+      37FF2C7432EA276D2CB7236627701F61231DFFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF005BB4658473BD7CFF96D19FFF94CF9CFF8FCD96FF8ACA91FF85C7
+      8BFF7ABE81FF65AD6CFF4B9251FF246829B020632439FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0060BC6C8A79C483FF9ED7A7FF9BD4A4FF97D29FFF92CF9AFF8DCC
+      95FF88CA90FF7AC282FF7EC485FF5DA463FF266B2AB02265251DFFFFFF00FFFF
+      FF00FFFFFF00FFFFFF0062BE6D937BC785FF77C281FF54AB5EFF4EA357FF499B
+      51FF63AC6BFF83C38BFF87C98FFF82C689FF509756FF276D2C70FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF0063C06E9F5FBB6AD2FFFFFF00FFFFFF00FFFF
+      FF004B9E538D45964DE186C68EFF88C98FFF6FB376FF2E7633B745964D613F8E
+      466139864061347E3A612E76336167C6730364C2707BFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF004DA1558347994FED419149F63B8842F835803CE84DA155E84799
+      4FF8419149F63B8842ED35803C83FFFFFF00FFFFFF00FFFFFF00FFFFFF001E5F
+      217B1B5B1E0354AB5E614EA35761499B516143934B613D8B446154AB5EB780C3
+      89FF8DCC95FF83C48AFF3D8B44E137833E8DFFFFFF00FFFFFF00FFFFFF002366
+      27D21F61239FFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF005BB4657075BF
+      7EFF98D2A1FF94CF9CFF86C78DFF5EA765FF398640FF347E3AFF2E7633FF4990
+      4FFF458B4AFF20632493FFFFFF00FFFFFF00FFFFFF00FFFFFF0060BC6C1D5CB6
+      67B085C98EFF9BD4A4FF8FCE98FF92CF9AFF8DCC95FF88CA90FF83C68BFF7EC4
+      85FF79C17FFF478D4CFF2265258AFFFFFF00FFFFFF00FFFFFF00FFFFFF0062BE
+      6D395EB968B079C383FF89CA92FF94D09CFF95D19EFF90CF99FF8CCB94FF87C9
+      8FFF80C487FF4E9554FF276D2C84FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF0063C06E1D5FBB6A705BB465B756AD5FEA50A65AFF4B9E53FF45964DFF60A8
+      68FF5BA262FF347E3A90FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF004799
+      4FD24191499CFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF004EA3
+      5778499B5103FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+    }
+    OnClick = bbCommitChangesClick
+    TabOrder = 6
+  end
+  object acDocProp: TActionList
+    left = 152
+    top = 40
+    object acFrameShow: TAction
+      Caption = 'acFrameShow'
+      OnExecute = acFrameShowExecute
+    end
+  end
+end

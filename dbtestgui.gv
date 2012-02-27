@@ -1,0 +1,136 @@
+digraph output {
+dbtestgui [shape=box]
+dbtestgui->interfaces
+interfaces [color=red]
+dbtestgui->forms
+forms [color=red]
+dbtestgui->frmmain
+node [shape=ellipse]
+edge [style=dotted]
+frmmain->classes
+classes [color=red]
+edge [style=dotted]
+frmmain->sysutils
+sysutils [color=red]
+edge [style=dotted]
+frmmain->db
+db [color=red]
+edge [style=dotted]
+frmmain->fileutil
+fileutil [color=red]
+edge [style=dotted]
+frmmain->lresources
+lresources [color=red]
+edge [style=dotted]
+frmmain->forms
+edge [style=dotted]
+frmmain->controls
+controls [color=red]
+edge [style=dotted]
+frmmain->graphics
+graphics [color=red]
+edge [style=dotted]
+frmmain->dialogs
+dialogs [color=red]
+edge [style=dotted]
+frmmain->dbgrids
+dbgrids [color=red]
+edge [style=dotted]
+frmmain->extctrls
+extctrls [color=red]
+edge [style=dotted]
+frmmain->stdctrls
+stdctrls [color=red]
+edge [style=dotted]
+frmmain->comctrls
+comctrls [color=red]
+edge [style=dotted]
+frmmain->menus
+menus [color=red]
+edge [style=dotted]
+frmmain->dbctrls
+dbctrls [color=red]
+edge [style=dotted]
+frmmain->buttons
+buttons [color=red]
+edge [style=dotted]
+frmmain->zconnection
+zconnection [color=red]
+edge [style=dotted]
+frmmain->zdataset
+zdataset [color=red]
+edge [style=dotted]
+frmmain->zsqlmetadata
+zsqlmetadata [color=red]
+dbtestgui->lresources
+dbtestgui->zcomponent
+zcomponent [color=red]
+dbtestgui->transdb
+node [shape=ellipse]
+edge [style=dotted]
+transdb->classes
+edge [style=dotted]
+transdb->sysutils
+edge [style=dotted]
+transdb->transconst
+node [shape=ellipse]
+edge [style=dotted]
+transconst->classes
+edge [style=dotted]
+transconst->sysutils
+edge [style=solid]
+transdb->md5
+md5 [color=red]
+edge [style=solid]
+transdb->db
+edge [style=solid]
+transdb->zconnection
+edge [style=solid]
+transdb->zdataset
+edge [style=solid]
+transdb->pattern
+node [shape=ellipse]
+edge [style=dotted]
+pattern->classes
+edge [style=dotted]
+pattern->sysutils
+edge [style=dotted]
+pattern->transconst
+edge [style=solid]
+pattern->transtoken
+node [shape=ellipse]
+edge [style=dotted]
+transtoken->classes
+edge [style=dotted]
+transtoken->sysutils
+edge [style=dotted]
+transtoken->transconst
+edge [style=solid]
+transtoken->transdb
+edge [style=solid]
+pattern->transtokenremix
+node [shape=ellipse]
+edge [style=dotted]
+transtokenremix->classes
+edge [style=dotted]
+transtokenremix->sysutils
+edge [style=dotted]
+transtokenremix->transconst
+edge [style=solid]
+transtokenremix->transdb
+edge [style=solid]
+pattern->transdb
+edge [style=solid]
+pattern->dbugintf
+dbugintf [color=red]
+edge [style=solid]
+transdb->dbugintf
+edge [style=solid]
+transdb->lclproc
+lclproc [color=red]
+edge [style=solid]
+transdb->defaulttranslator
+defaulttranslator [color=red]
+edge [style=solid]
+transdb->fileutil
+}

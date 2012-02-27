@@ -1,0 +1,67 @@
+object fraBlockImport: TfraBlockImport
+  Left = 0
+  Height = 334
+  Top = 0
+  Width = 648
+  Align = alClient
+  ClientHeight = 334
+  ClientWidth = 648
+  TabOrder = 0
+  DesignLeft = 544
+  DesignTop = 253
+  object bbExtractBlocks: TBitBtn
+    Left = 560
+    Height = 30
+    Top = 22
+    Width = 75
+    Anchors = [akTop, akRight]
+    Caption = 'Extract'
+    TabOrder = 0
+  end
+  object clbBlocks: TCheckListBox
+    Left = 8
+    Height = 224
+    Top = 64
+    Width = 628
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ItemHeight = 0
+    TabOrder = 1
+  end
+  object cbProject: TComboBox
+    Left = 8
+    Height = 20
+    Top = 22
+    Width = 100
+    ItemHeight = 12
+    TabOrder = 2
+    Text = 'cbProject'
+  end
+  object cbDocument: TComboBox
+    Left = 120
+    Height = 20
+    Top = 22
+    Width = 100
+    Enabled = False
+    ItemHeight = 12
+    TabOrder = 3
+    Text = 'cbDocument'
+  end
+  object Import: TBitBtn
+    Left = 560
+    Height = 30
+    Top = 296
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Import'
+    TabOrder = 4
+  end
+  object cbLang: TComboBox
+    Left = 232
+    Height = 20
+    Top = 22
+    Width = 64
+    ItemHeight = 12
+    TabOrder = 5
+    Text = 'cbLang'
+  end
+end

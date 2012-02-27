@@ -1,0 +1,114 @@
+digraph output {
+patterntestgui [shape=box]
+patterntestgui->interfaces
+interfaces [color=red]
+patterntestgui->forms
+forms [color=red]
+patterntestgui->patterntestguimnfrm
+node [shape=ellipse]
+edge [style=dotted]
+patterntestguimnfrm->classes
+classes [color=red]
+edge [style=dotted]
+patterntestguimnfrm->sysutils
+sysutils [color=red]
+edge [style=dotted]
+patterntestguimnfrm->fileutil
+fileutil [color=red]
+edge [style=dotted]
+patterntestguimnfrm->lresources
+lresources [color=red]
+edge [style=dotted]
+patterntestguimnfrm->forms
+edge [style=dotted]
+patterntestguimnfrm->controls
+controls [color=red]
+edge [style=dotted]
+patterntestguimnfrm->graphics
+graphics [color=red]
+edge [style=dotted]
+patterntestguimnfrm->dialogs
+dialogs [color=red]
+edge [style=dotted]
+patterntestguimnfrm->stdctrls
+stdctrls [color=red]
+edge [style=solid]
+patterntestguimnfrm->pattern
+node [shape=ellipse]
+edge [style=dotted]
+pattern->classes
+edge [style=dotted]
+pattern->sysutils
+edge [style=dotted]
+pattern->transconst
+node [shape=ellipse]
+edge [style=dotted]
+transconst->classes
+edge [style=dotted]
+transconst->sysutils
+edge [style=solid]
+pattern->transtoken
+node [shape=ellipse]
+edge [style=dotted]
+transtoken->classes
+edge [style=dotted]
+transtoken->sysutils
+edge [style=dotted]
+transtoken->transconst
+edge [style=solid]
+transtoken->transdb
+node [shape=ellipse]
+edge [style=dotted]
+transdb->classes
+edge [style=dotted]
+transdb->sysutils
+edge [style=dotted]
+transdb->transconst
+edge [style=solid]
+transdb->md5
+md5 [color=red]
+edge [style=solid]
+transdb->db
+db [color=red]
+edge [style=solid]
+transdb->zconnection
+zconnection [color=red]
+edge [style=solid]
+transdb->zdataset
+zdataset [color=red]
+edge [style=solid]
+transdb->pattern
+edge [style=solid]
+transdb->dbugintf
+dbugintf [color=red]
+edge [style=solid]
+transdb->lclproc
+lclproc [color=red]
+edge [style=solid]
+transdb->defaulttranslator
+defaulttranslator [color=red]
+edge [style=solid]
+transdb->fileutil
+edge [style=solid]
+pattern->transtokenremix
+node [shape=ellipse]
+edge [style=dotted]
+transtokenremix->classes
+edge [style=dotted]
+transtokenremix->sysutils
+edge [style=dotted]
+transtokenremix->transconst
+edge [style=solid]
+transtokenremix->transdb
+edge [style=solid]
+pattern->transdb
+edge [style=solid]
+pattern->dbugintf
+edge [style=solid]
+patterntestguimnfrm->transdb
+edge [style=solid]
+patterntestguimnfrm->transconst
+patterntestgui->lresources
+patterntestgui->zcomponent
+zcomponent [color=red]
+}

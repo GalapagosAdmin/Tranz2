@@ -1,0 +1,129 @@
+object fraProjProps: TfraProjProps
+  Left = 0
+  Height = 354
+  Top = 0
+  Width = 209
+  ClientHeight = 354
+  ClientWidth = 209
+  TabOrder = 0
+  DesignLeft = 857
+  DesignTop = 230
+  object pnlHeader: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 209
+    Align = alTop
+    Alignment = taLeftJustify
+    BorderWidth = 5
+    Caption = 'Project Properties'
+    Color = clWhite
+    Font.CharSet = 4
+    Font.Height = -20
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object lblProjectName: TLabel
+    Left = 16
+    Height = 21
+    Top = 64
+    Width = 89
+    Alignment = taRightJustify
+    Caption = 'Project Name'
+    ParentColor = False
+  end
+  object ebProjectName: TEdit
+    Left = 16
+    Height = 22
+    Top = 80
+    Width = 176
+    Anchors = [akTop, akLeft, akRight]
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object lblProjectDescription: TLabel
+    Left = 16
+    Height = 21
+    Top = 112
+    Width = 74
+    Alignment = taRightJustify
+    Caption = 'Description'
+    ParentColor = False
+  end
+  object mmProjectDescription: TMemo
+    Left = 16
+    Height = 74
+    Top = 128
+    Width = 176
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 2
+  end
+  object deBasePath: TDirectoryEdit
+    Left = 16
+    Height = 22
+    Top = 232
+    Width = 149
+    ShowHidden = False
+    ButtonWidth = 23
+    NumGlyphs = 0
+    Anchors = [akTop, akLeft, akRight]
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object lblBasePath: TLabel
+    Left = 16
+    Height = 21
+    Top = 216
+    Width = 69
+    Caption = 'Base Path:'
+    ParentColor = False
+  end
+  object lblSrcLang: TLabel
+    Left = 16
+    Height = 21
+    Top = 265
+    Width = 114
+    Alignment = taRightJustify
+    Caption = 'Source Language'
+    ParentColor = False
+  end
+  object cbSrcLang: TComboBox
+    Left = 136
+    Height = 21
+    Top = 265
+    Width = 50
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      'EN'
+      'JA'
+    )
+    TabOrder = 4
+    Text = 'EN'
+  end
+  object lblDestLang: TLabel
+    Left = 29
+    Height = 21
+    Top = 296
+    Width = 101
+    Alignment = taRightJustify
+    Caption = 'Dest. Language'
+    ParentColor = False
+  end
+  object cbDestLang: TComboBox
+    Left = 134
+    Height = 21
+    Top = 296
+    Width = 52
+    ItemHeight = 0
+    ItemIndex = 1
+    Items.Strings = (
+      'EN'
+      'JA'
+    )
+    TabOrder = 5
+    Text = 'JA'
+  end
+end

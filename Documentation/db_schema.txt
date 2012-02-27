@@ -1,0 +1,36 @@
+﻿SENTENCE
+  hash length 32
+  language length 2
+  text
+
+CREATE TABLE sentence (
+  hash      char(32) NOT NULL,
+  language  char(2) NOT NULL,
+  "text"    varchar(255) NOT NULL,
+  PRIMARY KEY (hash, language)
+);
+
+SENTENCECR
+hash1 length 32
+lang1 length 2
+hash2 length 32
+lang2 length 2
+
+CREATE TABLE sentencecr (
+  hash1  char(32) NOT NULL,
+  lang1  char(2) NOT NULL,
+  hash2  char(32) NOT NULL,
+  lang2  char(2) NOT NULL,
+  PRIMARY KEY (hash1, lang1)
+);
+
+SOMETHING
+field1
+field2  text
+
+CREATE TABLE something (
+  field1  text PRIMARY KEY NOT NULL,
+  field2  text NOT NULL
+);
+
+insert into something values ( "hello", "12345");

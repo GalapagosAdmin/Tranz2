@@ -1,0 +1,268 @@
+object Form1: TForm1
+  Left = 288
+  Height = 463
+  Top = 117
+  Width = 860
+  Caption = 'SQLite DB Test'
+  ClientHeight = 463
+  ClientWidth = 860
+  Menu = MainMenu1
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '0.9.31'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 382
+    Top = 66
+    Width = 121
+    Align = alLeft
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'TABLE NAME'
+        FieldName = 'TABLE_NAME'
+      end>
+    DataSource = dsTable
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 66
+    Top = 0
+    Width = 860
+    Align = alTop
+    ClientHeight = 66
+    ClientWidth = 860
+    TabOrder = 1
+    OnClick = Panel1Click
+    object SpeedButton1: TSpeedButton
+      Left = 819
+      Height = 22
+      Top = 16
+      Width = 23
+      Anchors = [akTop, akRight]
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+        FF00FFFFFF0000000021008197CB00353E560000002C00000027000000210000
+        001A000000130000000D743D049D743C045E542E07005B350C00FFFFFF00FFFF
+        FF00FFFFFF00000000110081979000839ABC0046523800000014000000110000
+        000D0000000A00000007A65C0DCDA75C0DCDA95E0E5CB56A1800FFFFFF00FFFF
+        FF00FFFFFF0000444F0000889F530595ABCE018AA0B200687918B76C1999B56A
+        18CCB56A18CCB56A18CCB56A18CCFFC538FFB56A18CCB76C195CFFFFFF00FFFF
+        FF00FFFFFF00008DA400008DA41B0496ACC817BCD0E5008DA4A3C17925CFFFE3
+        92FFFFD56AFFFFD15DFFFFD15DFFFFD15DFFFFD873FFC37923CCFFFFFF00FFFF
+        FF00FFFFFF000091A8000091A8000093AAA128D1E2F218B7CBDE8C8A57DDD187
+        2FCDD2872ECCD2872ECCD2872ECCFFE597FFD2872ECCD0852D5CFFFFFF00FFFF
+        FF00FFFFFF00039DB5000198AF000198AF6826BCCFDF3DD8E8FF1AB0C5D40198
+        AF7C6B927101D98E3400DF9438CCDF9438CCDE93375CD2872E00FFFFFF00FFFF
+        FF00FFFFFF00039FB6000298AF000299B03419ACC0CA4AD1E0FF4CD1E0FE19AB
+        C0CB019CB368749C7900E79C3E99E79C3E5CDF943800D2872E00FFFFFF00FFFF
+        FF00FFFFFF00039EB5C00296ACC3028EA5C6018AA1C85BCFDDFF45C5D6FF5BCE
+        DCFB15A9BEC401A0B854AF9F5E00E89D3F00DF943800D2872E00FFFFFF00FFFF
+        FF00FFFFFF0001A3BB6B54CBDBDA8AEAF5FF7EE5F2FF7EE5F2FF7DE5F2FF7EE5
+        F2FF7EE3EFF814ADC3BE01A4BC3F01A4BC0001A4BC0001A4BC00FFFFFF00FFFF
+        FF00FFFFFF0001A6BE1E14AFC5BA8FEBF5FE66DDEEFF84E7F3FF01A6BEB401A6
+        BEB401A6BEB401A6BEB401A6BEB401A6BE0001A6BE0001A6BE00FFFFFF00FFFF
+        FF00FFFFFF0001A9C10001A9C28276DDE8E371E1F0FF79E4F2FF81DBE5F10297
+        AEC202A4BC3001A7BF0001A7BF0001A7BF0001A7BF0001A7BF00FFFFFF00FFFF
+        FF00FFFFFF0001ACC40001ACC4362FC0D3C099EFF9FF72E3F4FF83E8F6FF89E2
+        EBF003A3BABE03A3BA3002A5BD0002A9C10001ADC50001ADC500FFFFFF00FFFF
+        FF00FFFFFF0001AEC70001AEC70201AFC8969BEEF5ED7FE9FAFF7EE9FAFF8EEE
+        FBFF8FE5EDEF03A3BABD03A3BA3002ABC30001B2CB0001B2CB00FFFFFF00FFFF
+        FF00FFFFFF0001B0C90001B0C90001B1CA4D4ECFDFCAB1F8FFFFA8F5FEFFA7F5
+        FEFFB5F9FFFF93E7EEEF03A3BABD02ABC33001B2CB0001B2CB00FFFFFF00FFFF
+        FF00FFFFFF0001B2CB0001B2CB0001B2CB0B01B3CCAB01B3CCAB01B3CCAB01B3
+        CCAB01B3CCAB01B3CCAB01B3CCAB01B3CCAB01B3CC0001B3CC00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+      }
+      NumGlyphs = 0
+      OnClick = SpeedButton1Click
+    end
+    object leDBName: TLabeledEdit
+      Left = 8
+      Height = 22
+      Top = 24
+      Width = 136
+      EditLabel.AnchorSideLeft.Control = leDBName
+      EditLabel.AnchorSideBottom.Control = leDBName
+      EditLabel.Left = 8
+      EditLabel.Height = 21
+      EditLabel.Top = 0
+      EditLabel.Width = 90
+      EditLabel.Caption = 'Database File:'
+      EditLabel.ParentColor = False
+      Enabled = False
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object BtnNoTrans: TButton
+      Left = 152
+      Height = 25
+      Top = 8
+      Width = 132
+      Caption = 'Find Untranslated'
+      OnClick = BtnNoTransClick
+      TabOrder = 1
+    end
+    object btnSrcOrphan: TButton
+      Left = 288
+      Height = 25
+      Top = 8
+      Width = 136
+      Caption = 'Source CR Orphans'
+      OnClick = btnSrcOrphanClick
+      TabOrder = 2
+    end
+    object btnDestCROrphan: TButton
+      Left = 432
+      Height = 25
+      Top = 8
+      Width = 128
+      Caption = 'Dest CR Orphans'
+      OnClick = btnDestCROrphanClick
+      TabOrder = 3
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 15
+    Top = 448
+    Width = 860
+    Panels = <>
+  end
+  object Splitter1: TSplitter
+    Left = 121
+    Height = 382
+    Top = 66
+    Width = 5
+  end
+  object pnlRightSide: TPanel
+    Left = 126
+    Height = 382
+    Top = 66
+    Width = 734
+    Align = alClient
+    ClientHeight = 382
+    ClientWidth = 734
+    TabOrder = 4
+    object mQuery: TMemo
+      Left = 1
+      Height = 90
+      Top = 1
+      Width = 732
+      Align = alTop
+      TabOrder = 0
+    end
+    object pnlQueryPane: TPanel
+      Left = 1
+      Height = 279
+      Top = 102
+      Width = 732
+      Align = alClient
+      Caption = 'pnlQueryPane'
+      ClientHeight = 279
+      ClientWidth = 732
+      TabOrder = 1
+      object DBNavigator1: TDBNavigator
+        Left = 1
+        Height = 25
+        Top = 0
+        Width = 241
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 241
+        DataSource = dsQuery
+        TabOrder = 0
+      end
+      object DBGrid2: TDBGrid
+        Left = 1
+        Height = 254
+        Top = 24
+        Width = 730
+        Align = alBottom
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        Color = clWindow
+        Columns = <>
+        DataSource = dsQuery
+        TabOrder = 1
+      end
+    end
+    object splQueryPane: TSplitter
+      Cursor = crVSplit
+      Left = 1
+      Height = 11
+      Top = 91
+      Width = 732
+      Align = alTop
+      ResizeAnchor = akTop
+    end
+  end
+  object ZConnection1: TZConnection
+    Protocol = 'sqlite-3'
+    Database = '/Users/shiruba/Desktop/Dropbox/Develop/DBTest/testdb.sqlite3'
+    DesignConnection = True
+    SQLHourGlass = True
+    left = 600
+    top = 16
+  end
+  object ZTable1: TZTable
+    Connection = ZConnection1
+    AutoCalcFields = False
+    left = 760
+    top = 16
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    AutoCalcFields = False
+    SQL.Strings = (
+      'select * from SQLITE_MASTER'
+    )
+    Params = <>
+    left = 696
+    top = 16
+  end
+  object dsTable: TDatasource
+    DataSet = ZSQLMetadata1
+    OnDataChange = dsTableDataChange
+    left = 664
+    top = 16
+  end
+  object OpenDialog1: TOpenDialog
+    left = 792
+    top = 16
+  end
+  object MainMenu1: TMainMenu
+    left = 568
+    top = 16
+    object mhFile: TMenuItem
+      Caption = '&File'
+      object miDBOpen: TMenuItem
+        Caption = '&Open Database...'
+        OnClick = miDBOpenClick
+      end
+    end
+  end
+  object dsQuery: TDatasource
+    DataSet = ZQuery1
+    left = 728
+    top = 16
+  end
+  object ZSQLMetadata1: TZSQLMetadata
+    Connection = ZConnection1
+    AutoCalcFields = False
+    MetadataType = mdTables
+    left = 632
+    top = 16
+  end
+end

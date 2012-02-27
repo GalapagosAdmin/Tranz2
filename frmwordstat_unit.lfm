@@ -1,0 +1,98 @@
+object frmWordStat: TfrmWordStat
+  Left = 640
+  Height = 376
+  Top = 128
+  Width = 546
+  Anchors = [akTop]
+  Caption = 'Tranz2 WordStat'
+  ClientHeight = 376
+  ClientWidth = 546
+  Enabled = False
+  OnShow = FormShow
+  LCLVersion = '0.9.31'
+  object mmSrcText: TMemo
+    Left = 8
+    Height = 90
+    Top = 32
+    Width = 532
+    Anchors = [akTop, akLeft, akRight]
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object cbSrcLang: TComboBox
+    Left = 8
+    Height = 20
+    Top = 6
+    Width = 100
+    ItemHeight = 12
+    TabOrder = 1
+    Text = 'EN'
+  end
+  object btnProcess: TBitBtn
+    Left = 389
+    Height = 30
+    Top = 128
+    Width = 75
+    Anchors = [akTop, akRight]
+    Caption = 'Analyze'
+    OnClick = btnProcessClick
+    TabOrder = 2
+  end
+  object ListView1: TListView
+    Left = 8
+    Height = 200
+    Top = 168
+    Width = 532
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Columns = <    
+      item
+        Caption = 'Token'
+        MinWidth = 50
+        Width = 200
+      end    
+      item
+        Caption = 'Frequency'
+        Width = 60
+      end>
+    RowSelect = True
+    TabOrder = 3
+    ViewStyle = vsReport
+  end
+  object ProgressBar1: TProgressBar
+    Left = 8
+    Height = 20
+    Top = 135
+    Width = 373
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 4
+    Visible = False
+  end
+  object bbUpdate: TBitBtn
+    Left = 465
+    Height = 30
+    Top = 128
+    Width = 75
+    Anchors = [akTop, akRight]
+    Caption = 'Update DB'
+    OnClick = bbUpdateClick
+    TabOrder = 5
+  end
+  object TrackBar1: TTrackBar
+    Left = 224
+    Height = 25
+    Top = 4
+    Width = 132
+    Max = 5
+    Min = 1
+    Position = 1
+    TabOrder = 6
+  end
+  object lblTokensPerEntry: TLabel
+    Left = 126
+    Height = 13
+    Top = 8
+    Width = 73
+    Caption = 'Tokens/Entry:'
+    ParentColor = False
+  end
+end

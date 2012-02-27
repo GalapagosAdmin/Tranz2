@@ -1,0 +1,181 @@
+object frmProjectFileAdd: TfrmProjectFileAdd
+  Left = 404
+  Height = 286
+  Top = 240
+  Width = 529
+  Caption = 'Add Document to Project'
+  ClientHeight = 286
+  ClientWidth = 529
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '0.9.31'
+  object pnlHeader: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 529
+    Align = alTop
+    Alignment = taLeftJustify
+    BorderWidth = 5
+    Caption = 'Add Document to Project'
+    Color = clWhite
+    Font.CharSet = 4
+    Font.Height = -20
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object cbProjectName: TComboBox
+    Left = 126
+    Height = 21
+    Top = 64
+    Width = 154
+    ItemHeight = 0
+    TabOrder = 1
+    Text = 'cbProjectName'
+  end
+  object lblProject: TLabel
+    Left = 76
+    Height = 21
+    Top = 64
+    Width = 47
+    Alignment = taRightJustify
+    Caption = 'Project'
+    ParentColor = False
+  end
+  object lblFile: TLabel
+    Left = 56
+    Height = 21
+    Top = 96
+    Width = 67
+    Alignment = taRightJustify
+    Caption = 'Document'
+    ParentColor = False
+  end
+  object FileNameEdit1: TFileNameEdit
+    Left = 126
+    Height = 22
+    Top = 96
+    Width = 362
+    DialogOptions = []
+    FilterIndex = 0
+    HideDirectories = False
+    ButtonWidth = 23
+    NumGlyphs = 0
+    Anchors = [akTop, akLeft, akRight]
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object lblDescription: TLabel
+    Left = 49
+    Height = 21
+    Top = 128
+    Width = 74
+    Alignment = taRightJustify
+    Caption = 'Description'
+    ParentColor = False
+  end
+  object mmDescription: TMemo
+    Left = 126
+    Height = 45
+    Top = 128
+    Width = 389
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 3
+  end
+  object lblSrcLang: TLabel
+    Left = 9
+    Height = 21
+    Top = 189
+    Width = 114
+    Alignment = taRightJustify
+    Caption = 'Source Language'
+    ParentColor = False
+  end
+  object cbSourceLang: TComboBox
+    Left = 126
+    Height = 21
+    Top = 189
+    Width = 50
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      'EN'
+      'JA'
+    )
+    TabOrder = 4
+    Text = 'EN'
+  end
+  object lblDestLang: TLabel
+    Left = 22
+    Height = 21
+    Top = 221
+    Width = 101
+    Alignment = taRightJustify
+    Caption = 'Dest. Language'
+    ParentColor = False
+  end
+  object cbDestLang: TComboBox
+    Left = 126
+    Height = 21
+    Top = 221
+    Width = 52
+    ItemHeight = 0
+    ItemIndex = 1
+    Items.Strings = (
+      'EN'
+      'JA'
+    )
+    OnChange = cbDestLangChange
+    TabOrder = 5
+    Text = 'JA'
+  end
+  object bbImport: TBitBtn
+    Left = 440
+    Height = 30
+    Top = 248
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Add'
+    Glyph.Data = {
+      36040000424D3604000000000000360000002800000010000000100000000100
+      2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF001C811F231B7E1F7D1B7A1FDB1A731EF31A701EF31B71
+      1FDB1B711F7D1B6C1F23FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF001C8A21531B831FE642A052FF87CA9AFF9BD3ABFF9BD2ABFF83C7
+      96FF3D974CFF1A6E1EE61B701F53FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF001C912B531B8A20F46DBE83FFA8DBB5FF87CC98FF66BC7DFF64BA7CFF86CB
+      98FFA5D9B4FF66B77DFF1A6C1DF41B711F53FFFFFF00FFFFFF00FFFFFF001D9B
+      36221C962FE572C287FFA8DBB2FF60BC77FF5CBA73FF59B870FF59B56FFF58B5
+      6FFF5BB774FFA5D9B3FF69B87FFF1A711EE51B711F22FFFFFF00FFFFFF001EA4
+      3D7E4CB064FFAADDB4FF64C179FF5FBE71FF75C585FFD4ECD9FF8ACD99FF56B6
+      6CFF58B56EFF5CB774FFA6DAB4FF419B4EFF1B771F7EFFFFFF00FFFFFF001FA9
+      42DB91D29FFF8DD49AFF64C374FF79C987FFF2FAF4FFFFFFFFFFFDFEFDFF86CB
+      96FF57B76DFF5BB972FF85CC97FF87C79AFF1B781FDBFFFFFF00FFFFFF001FAD
+      42F6A6DCAFFF70CA7FFF73CA80FFF0F9F1FFFFFFFFFFEBF7EDFFFFFFFFFFFBFD
+      FCFF88CD96FF5BB971FF67BE7DFFA0D7AFFF1B7A1EF6FFFFFF00FFFFFF0026B4
+      4BF6A7DDB1FF72CC80FF66C773FFB0E1B7FFD2EED6FF63C170FFB8E3BFFFFFFF
+      FFFFFBFDFCFF8CD099FF69C17EFFA1D7AEFF1B7F1EF6FFFFFF00FFFFFF002DBB
+      54DB95D7A1FF91D79BFF69C976FF64C66FFF61C46EFF61C36FFF61C26FFFB9E4
+      C0FFFFFFFFFFE3F4E6FF8BD199FF8BCE9DFF1C8820DBFFFFFF00FFFFFF0034BE
+      597E57BF70FFAFE1B7FF6DCC7AFF68C872FF65C770FF63C56EFF62C46EFF63C4
+      71FFB6E3BEFF6FC77EFFACDFB5FF48A95EFF1C8F267EFFFFFF00FFFFFF0039C2
+      5C2234BE55E57FCE90FFAEE1B5FF6DCC7AFF6ACA76FF68C872FF68C874FF68C8
+      75FF6BC979FFACDFB4FF76C489FF1C962DE51C942D22FFFFFF00FFFFFF00FFFF
+      FF003BC55E5334C055F47FCE90FFAFE1B7FF92D89DFF77CE83FF77CE83FF92D8
+      9DFFAEE1B5FF78C88BFF1D9D32F41D9D3653FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF003DC7605336C259E659C274FF96D7A3FFA5DCAEFFA5DCAEFF95D6
+      A1FF50B96AFF1FAB42E61FA94253FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF0040C962233BC55E7D39C25BDB31BD54F32DBB52F32BB9
+      52DB2BB7527D28B44E23FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+    }
+    ModalResult = 1
+    OnClick = bbImportClick
+    TabOrder = 6
+  end
+end

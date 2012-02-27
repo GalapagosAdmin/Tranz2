@@ -1,0 +1,536 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <MainUnit Value="0"/>
+      <Title Value="Maruyaku"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="../Maruyaku/LANG"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1" Active="Default">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="5">
+      <Item1>
+        <PackageName Value="zcomponent"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="TurboPowerIPro"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LazControls"/>
+        <MinVersion Valid="True"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="LCLBase"/>
+        <MinVersion Major="1" Release="1" Valid="True"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="LCL"/>
+      </Item5>
+    </RequiredPackages>
+    <Units Count="26">
+      <Unit0>
+        <Filename Value="marutoku.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="marutoku"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="24" Y="8"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="mtfrmmain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmMain"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="mtfrmmain"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="137"/>
+        <CursorPos X="25" Y="148"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="mtprojecttree.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fraProject"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="mtprojecttree"/>
+        <EditorIndex Value="12"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="45"/>
+        <CursorPos X="49" Y="63"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="mtfraintro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fraIntro"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="mtfraintro"/>
+        <EditorIndex Value="11"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="50" Y="1"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="mtdatamodule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataModule1"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="mtdatamodule"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="13"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="30" Y="23"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="index.html"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="20" Y="18"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="HTML"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="transdb.pas"/>
+        <UnitName Value="transdb"/>
+        <EditorIndex Value="21"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1444"/>
+        <CursorPos X="63" Y="1460"/>
+        <UsageCount Value="111"/>
+        <Bookmarks Count="1">
+          <Item0 X="1" Y="838" ID="0"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="transconst.pas"/>
+        <UnitName Value="TransConst"/>
+        <EditorIndex Value="20"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="4"/>
+        <CursorPos X="7" Y="49"/>
+        <UsageCount Value="110"/>
+        <Loaded Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="mtfrmprojectfileadd.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmProjectFileAdd"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="mtfrmprojectfileadd"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="52"/>
+        <CursorPos X="42" Y="69"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="mtfrmnewproject.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmNewProject"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="mtfrmnewproject"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="31"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="mtfradocprops.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fraDocProps"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="mtFraDocProps"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="21"/>
+        <CursorPos X="70" Y="7"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="mtfraprojprops.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fraProjProps"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="mtfraprojprops"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="34"/>
+        <CursorPos X="1" Y="48"/>
+        <UsageCount Value="203"/>
+        <Loaded Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="toproject.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="toProject"/>
+        <EditorIndex Value="16"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="50"/>
+        <CursorPos X="1" Y="19"/>
+        <UsageCount Value="203"/>
+        <Loaded Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="transtokenremix.pas"/>
+        <UnitName Value="TransTokenRemix"/>
+        <EditorIndex Value="19"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="122" Y="5"/>
+        <UsageCount Value="114"/>
+        <Loaded Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="todocument.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="toDocument"/>
+        <EditorIndex Value="18"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="95"/>
+        <CursorPos X="81" Y="123"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="toprojectlist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="toProjectList"/>
+        <EditorIndex Value="15"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="30"/>
+        <CursorPos X="34" Y="26"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="todocumentlist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="toDocumentList"/>
+        <EditorIndex Value="17"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="4"/>
+        <CursorPos X="44" Y="21"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="mtnotification.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="mtNotification"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="10"/>
+        <CursorPos X="26" Y="28"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="tolanglist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="toLangList"/>
+        <EditorIndex Value="14"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="20"/>
+        <CursorPos X="32" Y="8"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="mtdoclist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fraDocList"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="mtdoclist"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="39" Y="8"/>
+        <UsageCount Value="215"/>
+        <Loaded Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="mtfrablockimport.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FraBlockImport"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="mtfrablockimport"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="78"/>
+        <CursorPos X="35" Y="90"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="blockextract.pas"/>
+        <UnitName Value="BlockExtract"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="40"/>
+        <CursorPos X="18" Y="55"/>
+        <UsageCount Value="230"/>
+        <Loaded Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="pattern.pas"/>
+        <UnitName Value="pattern"/>
+        <EditorIndex Value="23"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="13"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="228"/>
+        <Loaded Value="True"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="../../Public/tosegment_20111223.pas"/>
+        <UnitName Value="toSegment_20111223"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="59"/>
+        <CursorPos X="79" Y="120"/>
+        <UsageCount Value="55"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="transtoken.pas"/>
+        <UnitName Value="TransToken"/>
+        <EditorIndex Value="24"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="13"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="228"/>
+        <Loaded Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="mtfrasegedit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fraSegmentEdit"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="mtfrasegedit"/>
+        <EditorIndex Value="22"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="126"/>
+        <CursorPos X="8" Y="139"/>
+        <UsageCount Value="446"/>
+        <Loaded Value="True"/>
+      </Unit25>
+    </Units>
+    <JumpHistory Count="26" HistoryIndex="25">
+      <Position1>
+        <Filename Value="mtfrmmain.pas"/>
+        <Caret Line="148" Column="88" TopLine="137"/>
+      </Position1>
+      <Position2>
+        <Filename Value="mtfrmmain.pas"/>
+        <Caret Line="145" Column="27" TopLine="137"/>
+      </Position2>
+      <Position3>
+        <Filename Value="mtfrmmain.pas"/>
+        <Caret Line="148" Column="23" TopLine="134"/>
+      </Position3>
+      <Position4>
+        <Filename Value="mtfrablockimport.pas"/>
+        <Caret Line="17" Column="14" TopLine="14"/>
+      </Position4>
+      <Position5>
+        <Filename Value="mtfrablockimport.pas"/>
+        <Caret Line="73" Column="9" TopLine="68"/>
+      </Position5>
+      <Position6>
+        <Filename Value="mtfrablockimport.pas"/>
+        <Caret Line="4" Column="67" TopLine="1"/>
+      </Position6>
+      <Position7>
+        <Filename Value="mtfrmmain.pas"/>
+        <Caret Line="148" Column="1" TopLine="134"/>
+      </Position7>
+      <Position8>
+        <Filename Value="todocument.pas"/>
+        <Caret Line="109" Column="1" TopLine="91"/>
+      </Position8>
+      <Position9>
+        <Filename Value="mtfrablockimport.pas"/>
+        <Caret Line="108" Column="41" TopLine="99"/>
+      </Position9>
+      <Position10>
+        <Filename Value="mtfrablockimport.pas"/>
+        <Caret Line="74" Column="1" TopLine="59"/>
+      </Position10>
+      <Position11>
+        <Filename Value="mtfrablockimport.pas"/>
+        <Caret Line="120" Column="1" TopLine="100"/>
+      </Position11>
+      <Position12>
+        <Filename Value="todocument.pas"/>
+        <Caret Line="22" Column="24" TopLine="7"/>
+      </Position12>
+      <Position13>
+        <Filename Value="blockextract.pas"/>
+        <Caret Line="144" Column="37" TopLine="134"/>
+      </Position13>
+      <Position14>
+        <Filename Value="blockextract.pas"/>
+        <Caret Line="55" Column="18" TopLine="40"/>
+      </Position14>
+      <Position15>
+        <Filename Value="todocument.pas"/>
+        <Caret Line="111" Column="68" TopLine="101"/>
+      </Position15>
+      <Position16>
+        <Filename Value="transconst.pas"/>
+        <Caret Line="49" Column="7" TopLine="4"/>
+      </Position16>
+      <Position17>
+        <Filename Value="todocument.pas"/>
+        <Caret Line="114" Column="12" TopLine="101"/>
+      </Position17>
+      <Position18>
+        <Filename Value="mtfrmmain.pas"/>
+        <Caret Line="148" Column="1" TopLine="134"/>
+      </Position18>
+      <Position19>
+        <Filename Value="mtfrmmain.pas"/>
+        <Caret Line="85" Column="14" TopLine="82"/>
+      </Position19>
+      <Position20>
+        <Filename Value="mtfrmmain.pas"/>
+        <Caret Line="25" Column="19" TopLine="10"/>
+      </Position20>
+      <Position21>
+        <Filename Value="mtfrmmain.pas"/>
+        <Caret Line="79" Column="30" TopLine="76"/>
+      </Position21>
+      <Position22>
+        <Filename Value="mtdatamodule.pas"/>
+        <Caret Line="35" Column="24" TopLine="20"/>
+      </Position22>
+      <Position23>
+        <Filename Value="mtdatamodule.pas"/>
+        <Caret Line="15" Column="80" TopLine="1"/>
+      </Position23>
+      <Position24>
+        <Filename Value="todocument.pas"/>
+        <Caret Line="112" Column="40" TopLine="104"/>
+      </Position24>
+      <Position25>
+        <Filename Value="mtfrmmain.pas"/>
+        <Caret Line="79" Column="30" TopLine="76"/>
+      </Position25>
+      <Position26>
+        <Filename Value="mtfrmmain.pas"/>
+        <Caret Line="148" Column="25" TopLine="137"/>
+      </Position26>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="10"/>
+    <Target>
+      <Filename Value="marutoku"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <UseMsgFile Value="True"/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <BreakPoints Count="2">
+      <Item1>
+        <Source Value="mtprojecttree.pas"/>
+        <Line Value="45"/>
+      </Item1>
+      <Item2>
+        <Source Value="mtdatamodule.pas"/>
+        <Line Value="26"/>
+      </Item2>
+    </BreakPoints>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="_Document.SrcLang"/>
+      </Item1>
+    </Watches>
+    <Exceptions Count="9">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EProcess"/>
+      </Item4>
+      <Item5>
+        <Name Value="EDatabaseError"/>
+      </Item5>
+      <Item6>
+        <Name Value="ENoSuchProject"/>
+      </Item6>
+      <Item7>
+        <Name Value="ENoSuchDiskFile"/>
+      </Item7>
+      <Item8>
+        <Name Value="EZSQLException"/>
+      </Item8>
+      <Item9>
+        <Name Value="EZipError"/>
+      </Item9>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

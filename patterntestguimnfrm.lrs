@@ -1,0 +1,17 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TForm1','FORMDATA',[
+  'TPF0'#6'TForm1'#5'Form1'#4'Left'#3#190#3#6'Height'#2'm'#3'Top'#3#201#0#5'Wid'
+  +'th'#3']'#1#7'Caption'#6#16'Pattern Test GUI'#12'ClientHeight'#2'm'#11'Clien'
+  +'tWidth'#3']'#1#10'LCLVersion'#6#6'0.9.31'#0#5'TEdit'#7'ebInput'#4'Left'#2#8
+  +#6'Height'#2#22#3'Top'#2'&'#5'Width'#3#176#0#7'Anchors'#11#5'akTop'#6'akLeft'
+  +#7'akRight'#0#8'OnChange'#7#13'ebInputChange'#8'TabOrder'#2#0#4'Text'#6#14'I'
+  +' want a Kitty'#0#0#7'TButton'#8'btnJikou'#4'Left'#3#200#0#6'Height'#2#25#3
+  +'Top'#2' '#5'Width'#3#136#0#7'Anchors'#11#5'akTop'#7'akRight'#0#7'Caption'#6
+  +#19'Auto Pattern Lookup'#7'OnClick'#7#13'btnJikouClick'#8'TabOrder'#2#1#0#0#5
+  +'TEdit'#8'ebResult'#4'Left'#2#8#6'Height'#2#22#3'Top'#2'C'#5'Width'#3#176#0#7
+  +'Anchors'#11#5'akTop'#6'akLeft'#7'akRight'#0#8'ReadOnly'#9#8'TabOrder'#2#2#0
+  +#0#7'TButton'#7'Button1'#4'Left'#3#200#0#6'Height'#2#25#3'Top'#2'@'#5'Width'
+  +#3#136#0#7'Anchors'#11#5'akTop'#7'akRight'#0#7'Caption'#6#18'Raw Pattern Loo'
+  +'kup'#7'OnClick'#7#12'Button1Click'#8'TabOrder'#2#3#0#0#0
+]);

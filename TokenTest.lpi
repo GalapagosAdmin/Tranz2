@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <MainUnit Value="0"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <Language Value=""/>
+      <CharSet Value=""/>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="zcomponent"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="23">
+      <Unit0>
+        <Filename Value="TokenTest.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TokenTest"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="38" Y="20"/>
+        <UsageCount Value="301"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="frmttmain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmTokenTst"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrmTTmain"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="352"/>
+        <CursorPos X="4" Y="359"/>
+        <UsageCount Value="301"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="transtoken.pas"/>
+        <UnitName Value="TransToken"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="59"/>
+        <CursorPos X="25" Y="71"/>
+        <UsageCount Value="144"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="/usr/local/share/fpcsrc/rtl/inc/systemh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="741"/>
+        <CursorPos X="15" Y="756"/>
+        <UsageCount Value="7"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="transtokenremix.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TransTokenRemix"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="743"/>
+        <CursorPos X="35" Y="357"/>
+        <UsageCount Value="301"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="transdb.pas"/>
+        <UnitName Value="transdb"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="773"/>
+        <CursorPos X="53" Y="779"/>
+        <UsageCount Value="142"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="transconst.pas"/>
+        <UnitName Value="TransConst"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="88" Y="1"/>
+        <UsageCount Value="142"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../zeos_lib/src/component/ZConnection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ZConnection"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="270"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../zeos_lib/src/dbc/ZDbcDbLib.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ZDbcDbLib"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="733"/>
+        <CursorPos X="1" Y="757"/>
+        <SyntaxHighlighter Value="Text"/>
+        <UsageCount Value="270"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../zeos_lib/src/dbc/ZDbcConnection.pas"/>
+        <UnitName Value="ZDbcConnection"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="27"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../zeos_lib/src/core/ZClasses.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ZClasses"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="88"/>
+        <CursorPos X="30" Y="105"/>
+        <SyntaxHighlighter Value="Text"/>
+        <UsageCount Value="270"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="../zeos_lib/src/core/ZTokenizer.pas"/>
+        <UnitName Value="ZTokenizer"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="27"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../zeos_lib/src/parsesql/ZSelectSchema.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ZSelectSchema"/>
+        <SyntaxHighlighter Value="Text"/>
+        <UsageCount Value="270"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../zeos_lib/src/dbc/ZDbcMetadata.pas"/>
+        <UnitName Value="ZDbcMetadata"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="27"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="../zeos_lib/src/plain/ZPlainDbLibDriver.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ZPlainDbLibDriver"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1449"/>
+        <SyntaxHighlighter Value="Text"/>
+        <UsageCount Value="270"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="../zeos_lib/src/dbc/ZDbcSqLiteUtils.pas"/>
+        <UnitName Value="ZDbcSqLiteUtils"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="285"/>
+        <CursorPos X="1" Y="229"/>
+        <UsageCount Value="31"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="TokenTest.lrs"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="26"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="pattern.pas"/>
+        <UnitName Value="pattern"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="71" Y="1"/>
+        <UsageCount Value="132"/>
+        <Loaded Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="../zeos_lib/packages/lazarus/zcomponent.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="zcomponent"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="200"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="segment.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Segment"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="93" Y="1"/>
+        <UsageCount Value="203"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:/lazarus/lcl/include/control.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="3266"/>
+        <CursorPos X="1" Y="3278"/>
+        <UsageCount Value="7"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="tolanglist.pas"/>
+        <UnitName Value="toLangList"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="18"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="31"/>
+        <Loaded Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="../zeos_lib/src/plain/ZPlainPostgreSqlDriver.pas"/>
+        <UnitName Value="ZPlainPostgreSqlDriver"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="60"/>
+        <CursorPos X="42" Y="67"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+      </Unit22>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="5" Column="78" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="382" Column="20" TopLine="365"/>
+      </Position2>
+      <Position3>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="35" Column="5" TopLine="23"/>
+      </Position3>
+      <Position4>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="376" Column="26" TopLine="362"/>
+      </Position4>
+      <Position5>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="377" Column="26" TopLine="363"/>
+      </Position5>
+      <Position6>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="378" Column="26" TopLine="364"/>
+      </Position6>
+      <Position7>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="377" Column="26" TopLine="363"/>
+      </Position7>
+      <Position8>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="349" Column="6" TopLine="325"/>
+      </Position8>
+      <Position9>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="350" Column="6" TopLine="326"/>
+      </Position9>
+      <Position10>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="349" Column="6" TopLine="325"/>
+      </Position10>
+      <Position11>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="78" Column="88" TopLine="65"/>
+      </Position11>
+      <Position12>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="89" Column="48" TopLine="77"/>
+      </Position12>
+      <Position13>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="336" Column="52" TopLine="324"/>
+      </Position13>
+      <Position14>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="421" Column="15" TopLine="409"/>
+      </Position14>
+      <Position15>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="422" Column="67" TopLine="416"/>
+      </Position15>
+      <Position16>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="376" Column="1" TopLine="374"/>
+      </Position16>
+      <Position17>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="365" Column="3" TopLine="361"/>
+      </Position17>
+      <Position18>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="371" Column="3" TopLine="369"/>
+      </Position18>
+      <Position19>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="336" Column="5" TopLine="334"/>
+      </Position19>
+      <Position20>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="176" Column="24" TopLine="171"/>
+      </Position20>
+      <Position21>
+        <Filename Value="transdb.pas"/>
+        <Caret Line="139" Column="22" TopLine="133"/>
+      </Position21>
+      <Position22>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="88" Column="33" TopLine="73"/>
+      </Position22>
+      <Position23>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="89" Column="43" TopLine="73"/>
+      </Position23>
+      <Position24>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="215" Column="42" TopLine="195"/>
+      </Position24>
+      <Position25>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="95" Column="90" TopLine="95"/>
+      </Position25>
+      <Position26>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="347" Column="15" TopLine="345"/>
+      </Position26>
+      <Position27>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="361" Column="6" TopLine="344"/>
+      </Position27>
+      <Position28>
+        <Filename Value="transtoken.pas"/>
+        <Caret Line="287" Column="19" TopLine="270"/>
+      </Position28>
+      <Position29>
+        <Filename Value="transtoken.pas"/>
+        <Caret Line="72" Column="4" TopLine="61"/>
+      </Position29>
+      <Position30>
+        <Filename Value="frmttmain.pas"/>
+        <Caret Line="19" Column="14" TopLine="10"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/component;C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/dbc;C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/core;C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/parsesql;C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/plain;../zeos_lib/packages/lazarus"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <Checks>
+        <IOChecks Value="True"/>
+      </Checks>
+    </CodeGeneration>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="FLocations"/>
+      </Item1>
+    </Watches>
+    <Exceptions Count="6">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EZSQLException"/>
+      </Item4>
+      <Item5>
+        <Name Value="EStringListError"/>
+      </Item5>
+      <Item6>
+        <Name Value="EProcess"/>
+      </Item6>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

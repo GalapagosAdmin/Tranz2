@@ -1,0 +1,130 @@
+digraph output {
+trainer [shape=box]
+trainer->interfaces
+interfaces [color=red]
+trainer->forms
+forms [color=red]
+trainer->frmtrainermain
+node [shape=ellipse]
+edge [style=dotted]
+frmtrainermain->classes
+classes [color=red]
+edge [style=dotted]
+frmtrainermain->sysutils
+sysutils [color=red]
+edge [style=dotted]
+frmtrainermain->fileutil
+fileutil [color=red]
+edge [style=dotted]
+frmtrainermain->lresources
+lresources [color=red]
+edge [style=dotted]
+frmtrainermain->forms
+edge [style=dotted]
+frmtrainermain->controls
+controls [color=red]
+edge [style=dotted]
+frmtrainermain->graphics
+graphics [color=red]
+edge [style=dotted]
+frmtrainermain->dialogs
+dialogs [color=red]
+edge [style=dotted]
+frmtrainermain->stdctrls
+stdctrls [color=red]
+edge [style=dotted]
+frmtrainermain->extctrls
+extctrls [color=red]
+edge [style=dotted]
+frmtrainermain->buttons
+buttons [color=red]
+edge [style=dotted]
+frmtrainermain->comctrls
+comctrls [color=red]
+edge [style=dotted]
+frmtrainermain->actnlist
+actnlist [color=red]
+edge [style=solid]
+frmtrainermain->transtrain
+node [shape=ellipse]
+edge [style=dotted]
+transtrain->classes
+edge [style=dotted]
+transtrain->sysutils
+edge [style=solid]
+frmtrainermain->transdb
+node [shape=ellipse]
+edge [style=dotted]
+transdb->classes
+edge [style=dotted]
+transdb->sysutils
+edge [style=dotted]
+transdb->transconst
+node [shape=ellipse]
+edge [style=dotted]
+transconst->classes
+edge [style=dotted]
+transconst->sysutils
+edge [style=solid]
+transdb->md5
+md5 [color=red]
+edge [style=solid]
+transdb->db
+db [color=red]
+edge [style=solid]
+transdb->zconnection
+zconnection [color=red]
+edge [style=solid]
+transdb->zdataset
+zdataset [color=red]
+edge [style=solid]
+transdb->pattern
+node [shape=ellipse]
+edge [style=dotted]
+pattern->classes
+edge [style=dotted]
+pattern->sysutils
+edge [style=dotted]
+pattern->transconst
+edge [style=solid]
+pattern->transtoken
+node [shape=ellipse]
+edge [style=dotted]
+transtoken->classes
+edge [style=dotted]
+transtoken->sysutils
+edge [style=dotted]
+transtoken->transconst
+edge [style=solid]
+transtoken->transdb
+edge [style=solid]
+pattern->transtokenremix
+node [shape=ellipse]
+edge [style=dotted]
+transtokenremix->classes
+edge [style=dotted]
+transtokenremix->sysutils
+edge [style=dotted]
+transtokenremix->transconst
+edge [style=solid]
+transtokenremix->transdb
+edge [style=solid]
+pattern->transdb
+edge [style=solid]
+pattern->dbugintf
+dbugintf [color=red]
+edge [style=solid]
+transdb->dbugintf
+edge [style=solid]
+transdb->lclproc
+lclproc [color=red]
+edge [style=solid]
+transdb->defaulttranslator
+defaulttranslator [color=red]
+edge [style=solid]
+transdb->fileutil
+trainer->lresources
+trainer->transtrain
+trainer->zcomponent
+zcomponent [color=red]
+}

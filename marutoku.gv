@@ -1,0 +1,555 @@
+digraph output {
+marutoku [shape=box]
+marutoku->interfaces
+interfaces [color=red]
+marutoku->forms
+forms [color=red]
+marutoku->zcomponent
+zcomponent [color=red]
+marutoku->lazcontrols
+lazcontrols [color=red]
+marutoku->mtfrmmain
+node [shape=ellipse]
+edge [style=dotted]
+mtfrmmain->classes
+classes [color=red]
+edge [style=dotted]
+mtfrmmain->sysutils
+sysutils [color=red]
+edge [style=dotted]
+mtfrmmain->fileutil
+fileutil [color=red]
+edge [style=dotted]
+mtfrmmain->forms
+edge [style=dotted]
+mtfrmmain->controls
+controls [color=red]
+edge [style=dotted]
+mtfrmmain->graphics
+graphics [color=red]
+edge [style=dotted]
+mtfrmmain->dialogs
+dialogs [color=red]
+edge [style=dotted]
+mtfrmmain->comctrls
+comctrls [color=red]
+edge [style=dotted]
+mtfrmmain->buttons
+buttons [color=red]
+edge [style=dotted]
+mtfrmmain->extctrls
+extctrls [color=red]
+edge [style=dotted]
+mtfrmmain->mtprojecttree
+node [shape=ellipse]
+edge [style=dotted]
+mtprojecttree->classes
+edge [style=dotted]
+mtprojecttree->sysutils
+edge [style=dotted]
+mtprojecttree->fileutil
+edge [style=dotted]
+mtprojecttree->forms
+edge [style=dotted]
+mtprojecttree->controls
+edge [style=dotted]
+mtprojecttree->comctrls
+edge [style=solid]
+mtprojecttree->dialogs
+edge [style=solid]
+mtprojecttree->mtdatamodule
+node [shape=ellipse]
+edge [style=dotted]
+mtdatamodule->classes
+edge [style=dotted]
+mtdatamodule->sysutils
+edge [style=dotted]
+mtdatamodule->fileutil
+edge [style=dotted]
+mtdatamodule->actnlist
+actnlist [color=red]
+edge [style=dotted]
+mtdatamodule->menus
+menus [color=red]
+edge [style=dotted]
+mtdatamodule->forms
+edge [style=dotted]
+mtdatamodule->controls
+edge [style=dotted]
+mtdatamodule->dialogs
+edge [style=dotted]
+mtdatamodule->extctrls
+edge [style=dotted]
+mtdatamodule->utf8process
+utf8process [color=red]
+edge [style=dotted]
+mtdatamodule->ipfilebroker
+ipfilebroker [color=red]
+edge [style=solid]
+mtdatamodule->mtfrmmain
+edge [style=solid]
+mtdatamodule->iputils
+iputils [color=red]
+edge [style=solid]
+mtdatamodule->iphtml
+iphtml [color=red]
+edge [style=solid]
+mtdatamodule->transdb
+node [shape=ellipse]
+edge [style=dotted]
+transdb->classes
+edge [style=dotted]
+transdb->sysutils
+edge [style=dotted]
+transdb->transconst
+node [shape=ellipse]
+edge [style=dotted]
+transconst->classes
+edge [style=dotted]
+transconst->sysutils
+edge [style=solid]
+transdb->md5
+md5 [color=red]
+edge [style=solid]
+transdb->db
+db [color=red]
+edge [style=solid]
+transdb->zconnection
+zconnection [color=red]
+edge [style=solid]
+transdb->zdataset
+zdataset [color=red]
+edge [style=solid]
+transdb->pattern
+node [shape=ellipse]
+edge [style=dotted]
+pattern->classes
+edge [style=dotted]
+pattern->sysutils
+edge [style=dotted]
+pattern->transconst
+edge [style=solid]
+pattern->transtoken
+node [shape=ellipse]
+edge [style=dotted]
+transtoken->classes
+edge [style=dotted]
+transtoken->sysutils
+edge [style=dotted]
+transtoken->transconst
+edge [style=solid]
+transtoken->transdb
+edge [style=solid]
+pattern->transtokenremix
+node [shape=ellipse]
+edge [style=dotted]
+transtokenremix->classes
+edge [style=dotted]
+transtokenremix->sysutils
+edge [style=dotted]
+transtokenremix->transconst
+edge [style=solid]
+transtokenremix->transdb
+edge [style=solid]
+pattern->transdb
+edge [style=solid]
+pattern->dbugintf
+dbugintf [color=red]
+edge [style=solid]
+transdb->dbugintf
+edge [style=solid]
+transdb->lclproc
+lclproc [color=red]
+edge [style=solid]
+transdb->defaulttranslator
+defaulttranslator [color=red]
+edge [style=solid]
+transdb->fileutil
+edge [style=solid]
+mtdatamodule->comctrls
+edge [style=solid]
+mtdatamodule->defaulttranslator
+edge [style=solid]
+mtdatamodule->graphics
+edge [style=solid]
+mtdatamodule->transconst
+edge [style=solid]
+mtdatamodule->mtfrmprojectfileadd
+node [shape=ellipse]
+edge [style=dotted]
+mtfrmprojectfileadd->classes
+edge [style=dotted]
+mtfrmprojectfileadd->sysutils
+edge [style=dotted]
+mtfrmprojectfileadd->fileutil
+edge [style=dotted]
+mtfrmprojectfileadd->forms
+edge [style=dotted]
+mtfrmprojectfileadd->controls
+edge [style=dotted]
+mtfrmprojectfileadd->graphics
+edge [style=dotted]
+mtfrmprojectfileadd->dialogs
+edge [style=dotted]
+mtfrmprojectfileadd->extctrls
+edge [style=dotted]
+mtfrmprojectfileadd->stdctrls
+stdctrls [color=red]
+edge [style=dotted]
+mtfrmprojectfileadd->editbtn
+editbtn [color=red]
+edge [style=dotted]
+mtfrmprojectfileadd->buttons
+edge [style=solid]
+mtfrmprojectfileadd->transdb
+edge [style=solid]
+mtfrmprojectfileadd->mtdatamodule
+edge [style=solid]
+mtfrmprojectfileadd->toprojectlist
+node [shape=ellipse]
+edge [style=dotted]
+toprojectlist->classes
+edge [style=dotted]
+toprojectlist->sysutils
+edge [style=dotted]
+toprojectlist->transdb
+edge [style=dotted]
+toprojectlist->toproject
+node [shape=ellipse]
+edge [style=dotted]
+toproject->classes
+edge [style=dotted]
+toproject->sysutils
+edge [style=dotted]
+toproject->transconst
+edge [style=dotted]
+toproject->todocumentlist
+node [shape=ellipse]
+edge [style=dotted]
+todocumentlist->classes
+edge [style=dotted]
+todocumentlist->sysutils
+edge [style=dotted]
+todocumentlist->transdb
+edge [style=dotted]
+todocumentlist->todocument
+node [shape=ellipse]
+edge [style=dotted]
+todocument->classes
+edge [style=dotted]
+todocument->sysutils
+edge [style=dotted]
+todocument->transconst
+edge [style=solid]
+todocument->transdb
+edge [style=solid]
+todocument->dbugintf
+edge [style=solid]
+todocument->fileutil
+edge [style=dotted]
+todocumentlist->transconst
+edge [style=solid]
+toproject->transdb
+edge [style=dotted]
+toprojectlist->transconst
+edge [style=solid]
+mtfrmprojectfileadd->transconst
+edge [style=solid]
+mtfrmprojectfileadd->mtnotification
+node [shape=ellipse]
+edge [style=dotted]
+mtnotification->classes
+edge [style=dotted]
+mtnotification->sysutils
+edge [style=solid]
+mtnotification->mtdatamodule
+edge [style=solid]
+mtfrmprojectfileadd->tolanglist
+node [shape=ellipse]
+edge [style=dotted]
+tolanglist->classes
+edge [style=dotted]
+tolanglist->sysutils
+edge [style=dotted]
+tolanglist->transconst
+edge [style=solid]
+mtdatamodule->mtfrmnewproject
+node [shape=ellipse]
+edge [style=dotted]
+mtfrmnewproject->classes
+edge [style=dotted]
+mtfrmnewproject->sysutils
+edge [style=dotted]
+mtfrmnewproject->fileutil
+edge [style=dotted]
+mtfrmnewproject->forms
+edge [style=dotted]
+mtfrmnewproject->controls
+edge [style=dotted]
+mtfrmnewproject->graphics
+edge [style=dotted]
+mtfrmnewproject->dialogs
+edge [style=dotted]
+mtfrmnewproject->extctrls
+edge [style=dotted]
+mtfrmnewproject->buttons
+edge [style=dotted]
+mtfrmnewproject->stdctrls
+edge [style=dotted]
+mtfrmnewproject->editbtn
+edge [style=solid]
+mtfrmnewproject->transdb
+edge [style=solid]
+mtfrmnewproject->transconst
+edge [style=solid]
+mtfrmnewproject->mtdatamodule
+edge [style=solid]
+mtfrmnewproject->toprojectlist
+edge [style=solid]
+mtfrmnewproject->tolanglist
+edge [style=solid]
+mtdatamodule->toproject
+edge [style=solid]
+mtdatamodule->todocument
+edge [style=solid]
+mtdatamodule->toprojectlist
+edge [style=solid]
+mtdatamodule->todocumentlist
+edge [style=dotted]
+mtfrmmain->mtfraintro
+node [shape=ellipse]
+edge [style=dotted]
+mtfraintro->classes
+edge [style=dotted]
+mtfraintro->sysutils
+edge [style=dotted]
+mtfraintro->fileutil
+edge [style=dotted]
+mtfraintro->forms
+edge [style=dotted]
+mtfraintro->controls
+edge [style=dotted]
+mtfraintro->iphtml
+edge [style=dotted]
+mtfrmmain->mtfradocprops
+node [shape=ellipse]
+edge [style=dotted]
+mtfradocprops->classes
+edge [style=dotted]
+mtfradocprops->sysutils
+edge [style=dotted]
+mtfradocprops->fileutil
+edge [style=dotted]
+mtfradocprops->forms
+edge [style=dotted]
+mtfradocprops->controls
+edge [style=dotted]
+mtfradocprops->extctrls
+edge [style=dotted]
+mtfradocprops->stdctrls
+edge [style=dotted]
+mtfradocprops->editbtn
+edge [style=dotted]
+mtfradocprops->buttons
+edge [style=dotted]
+mtfradocprops->actnlist
+edge [style=dotted]
+mtfradocprops->todocument
+edge [style=solid]
+mtfradocprops->mtnotification
+edge [style=solid]
+mtfradocprops->tolanglist
+edge [style=solid]
+mtfradocprops->toprojectlist
+edge [style=dotted]
+mtfrmmain->mtfraprojprops
+node [shape=ellipse]
+edge [style=dotted]
+mtfraprojprops->classes
+edge [style=dotted]
+mtfraprojprops->sysutils
+edge [style=dotted]
+mtfraprojprops->fileutil
+edge [style=dotted]
+mtfraprojprops->forms
+edge [style=dotted]
+mtfraprojprops->controls
+edge [style=dotted]
+mtfraprojprops->extctrls
+edge [style=dotted]
+mtfraprojprops->stdctrls
+edge [style=dotted]
+mtfraprojprops->editbtn
+edge [style=dotted]
+mtfraprojprops->toproject
+edge [style=solid]
+mtfraprojprops->tolanglist
+edge [style=dotted]
+mtfrmmain->mtdoclist
+node [shape=ellipse]
+edge [style=dotted]
+mtdoclist->classes
+edge [style=dotted]
+mtdoclist->sysutils
+edge [style=dotted]
+mtdoclist->fileutil
+edge [style=dotted]
+mtdoclist->forms
+edge [style=dotted]
+mtdoclist->controls
+edge [style=dotted]
+mtdoclist->stdctrls
+edge [style=dotted]
+mtdoclist->extctrls
+edge [style=dotted]
+mtdoclist->comctrls
+edge [style=dotted]
+mtdoclist->buttons
+edge [style=dotted]
+mtdoclist->actnlist
+edge [style=dotted]
+mtdoclist->todocument
+edge [style=solid]
+mtdoclist->toprojectlist
+edge [style=solid]
+mtdoclist->toproject
+edge [style=solid]
+mtdoclist->mtnotification
+edge [style=solid]
+mtdoclist->mtdatamodule
+edge [style=solid]
+mtdoclist->dbugintf
+edge [style=dotted]
+mtfrmmain->mtfrablockimport
+node [shape=ellipse]
+edge [style=dotted]
+mtfrablockimport->classes
+edge [style=dotted]
+mtfrablockimport->sysutils
+edge [style=dotted]
+mtfrablockimport->fileutil
+edge [style=dotted]
+mtfrablockimport->forms
+edge [style=dotted]
+mtfrablockimport->controls
+edge [style=dotted]
+mtfrablockimport->checklst
+checklst [color=red]
+edge [style=dotted]
+mtfrablockimport->extctrls
+edge [style=dotted]
+mtfrablockimport->buttons
+edge [style=dotted]
+mtfrablockimport->stdctrls
+edge [style=dotted]
+mtfrablockimport->actnlist
+edge [style=dotted]
+mtfrablockimport->todocument
+edge [style=solid]
+mtfrablockimport->dbugintf
+edge [style=solid]
+mtfrablockimport->blockextract
+node [shape=ellipse]
+edge [style=dotted]
+blockextract->classes
+edge [style=dotted]
+blockextract->sysutils
+edge [style=dotted]
+blockextract->xmlread
+xmlread [color=red]
+edge [style=dotted]
+blockextract->dom
+dom [color=red]
+edge [style=solid]
+blockextract->dbugintf
+edge [style=solid]
+blockextract->transconst
+edge [style=solid]
+blockextract->zipper
+zipper [color=red]
+edge [style=solid]
+blockextract->comctrls
+edge [style=solid]
+blockextract->lclproc
+edge [style=solid]
+blockextract->transdb
+edge [style=solid]
+blockextract->fileutil
+edge [style=solid]
+mtfrablockimport->mtnotification
+edge [style=solid]
+mtfrablockimport->transdb
+edge [style=solid]
+mtfrablockimport->transconst
+edge [style=dotted]
+mtfrmmain->mtfrasegedit
+node [shape=ellipse]
+edge [style=dotted]
+mtfrasegedit->classes
+edge [style=dotted]
+mtfrasegedit->sysutils
+edge [style=dotted]
+mtfrasegedit->fileutil
+edge [style=dotted]
+mtfrasegedit->forms
+edge [style=dotted]
+mtfrasegedit->controls
+edge [style=dotted]
+mtfrasegedit->comctrls
+edge [style=dotted]
+mtfrasegedit->grids
+grids [color=red]
+edge [style=dotted]
+mtfrasegedit->stdctrls
+edge [style=dotted]
+mtfrasegedit->pairsplitter
+pairsplitter [color=red]
+edge [style=dotted]
+mtfrasegedit->buttons
+edge [style=dotted]
+mtfrasegedit->extctrls
+edge [style=dotted]
+mtfrasegedit->actnlist
+edge [style=dotted]
+mtfrasegedit->dividerbevel
+dividerbevel [color=red]
+edge [style=solid]
+mtfrasegedit->todocument
+edge [style=solid]
+mtfrasegedit->transdb
+edge [style=solid]
+mtfrasegedit->transconst
+edge [style=solid]
+mtfrasegedit->mtnotification
+edge [style=solid]
+mtfrasegedit->dialogs
+edge [style=solid]
+mtfrasegedit->lcltype
+lcltype [color=red]
+edge [style=solid]
+mtfrasegedit->toprojectlist
+edge [style=solid]
+mtfrasegedit->tolanglist
+edge [style=dotted]
+mtfrmmain->extendednotebook
+extendednotebook [color=red]
+edge [style=solid]
+mtfrmmain->mtdatamodule
+edge [style=solid]
+mtfrmmain->defaulttranslator
+edge [style=solid]
+mtfrmmain->transconst
+edge [style=solid]
+mtfrmmain->mtnotification
+marutoku->mtprojecttree
+marutoku->mtfraintro
+marutoku->turbopoweripro
+turbopoweripro [color=red]
+marutoku->mtdatamodule
+marutoku->mtfrmprojectfileadd
+marutoku->mtfrmnewproject
+marutoku->mtfradocprops
+marutoku->mtfraprojprops
+marutoku->mtfrablockimport
+marutoku->mtfrasegedit
+}
