@@ -93,6 +93,7 @@
       <Unit5>
         <Filename Value="transdb.pas"/>
         <UnitName Value="transdb"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
         <TopLine Value="773"/>
@@ -141,13 +142,11 @@
         <Filename Value="../zeos_lib/src/core/ZClasses.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ZClasses"/>
-        <EditorIndex Value="8"/>
         <WindowIndex Value="0"/>
         <TopLine Value="88"/>
         <CursorPos X="30" Y="105"/>
         <SyntaxHighlighter Value="Text"/>
         <UsageCount Value="270"/>
-        <Loaded Value="True"/>
       </Unit10>
       <Unit11>
         <Filename Value="../zeos_lib/src/core/ZTokenizer.pas"/>
@@ -245,13 +244,10 @@
       <Unit22>
         <Filename Value="../zeos_lib/src/plain/ZPlainPostgreSqlDriver.pas"/>
         <UnitName Value="ZPlainPostgreSqlDriver"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="60"/>
-        <CursorPos X="42" Y="67"/>
+        <TopLine Value="12"/>
+        <CursorPos X="39" Y="22"/>
         <UsageCount Value="27"/>
-        <Loaded Value="True"/>
       </Unit22>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
@@ -381,7 +377,7 @@
     <Version Value="11"/>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/component;C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/dbc;C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/core;C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/parsesql;C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/plain;../zeos_lib/packages/lazarus"/>
+      <OtherUnitFiles Value="C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/component/;C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/dbc/;C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/core/;C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/parsesql/;C:/Documents and Settings/811274/My Documents/My Dropbox/Develop.localized/zeos_lib/src/plain/;../zeos_lib/packages/lazarus"/>
     </SearchPaths>
     <CodeGeneration>
       <Checks>

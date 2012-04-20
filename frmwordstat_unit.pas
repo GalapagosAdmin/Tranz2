@@ -4,6 +4,7 @@ unit frmWordStat_Unit;
 //@001 2012.01.30 Noah SILVA Bug Fixes, Added Database updates
 //@002 2012.01.31 Noah SILVA Testing support for N-Tuple
 //@003 2012.02.05 Noah SILVA Added DB Self-Check at start-up
+//@004 2012.04.20 Noah SILVA Feature for adding new words to glossary
 // WordStat: Calculates Frequency of words based on text input
 {$mode objfpc}{$H+}
 
@@ -22,6 +23,7 @@ type
   TfrmWordStat = class(TForm)
     bbUpdate: TBitBtn;
     btnProcess: TBitBtn;
+    btnAddWord: TButton;
     lblTokensPerEntry: TLabel;
     cbSrcLang: TComboBox;
     ListView1: TListView;
@@ -30,6 +32,7 @@ type
     TrackBar1: TTrackBar;
     procedure bbUpdateClick(Sender: TObject);
     procedure btnProcessClick(Sender: TObject);
+    procedure btnAddWordClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
 
   private
@@ -46,7 +49,8 @@ implementation
 Uses TransToken,
      TransDB,                                                                   //@001+
      TransTokenRemix,                                                           //@002+
-     toLangList;                                                                //@003+
+     toLangList,                                                                //@003+
+     TransConst;                                                                //@004+
 
 { TfrmWordStat }
 
@@ -87,6 +91,13 @@ begin
     raw.free;
     raw2.free;                                                                  //@002+
   end;
+end;
+
+procedure TfrmWordStat.btnAddWordClick(Sender: TObject);                           //@004+
+begin
+//  ShowMessage(mmSrcText.SelText);
+  if mmSrcText.SelText = '' then exit;
+  TextAdd(cbSrcLang.Text, mmSrcText.SelText, mdWord)
 end;
 
 procedure TfrmWordStat.FormShow(Sender: TObject);
@@ -152,4 +163,4 @@ end;
 {$R *.lfm}
 
 end.
-
+

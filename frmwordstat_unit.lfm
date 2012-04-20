@@ -4,7 +4,7 @@ object frmWordStat: TfrmWordStat
   Top = 128
   Width = 546
   Anchors = [akTop]
-  Caption = 'Tranz2 WordStat'
+  Caption = 'Tranz2 WordStat N-Gram Extractor'
   ClientHeight = 376
   ClientWidth = 546
   Enabled = False
@@ -78,9 +78,9 @@ object frmWordStat: TfrmWordStat
     TabOrder = 5
   end
   object TrackBar1: TTrackBar
-    Left = 224
+    Left = 272
     Height = 25
-    Top = 4
+    Top = 1
     Width = 132
     Max = 5
     Min = 1
@@ -91,8 +91,17 @@ object frmWordStat: TfrmWordStat
     Left = 126
     Height = 13
     Top = 8
-    Width = 73
-    Caption = 'Tokens/Entry:'
+    Width = 146
+    Caption = 'n-gram size (Tokens/Entry):'
     ParentColor = False
+  end
+  object btnAddWord: TButton
+    Left = 465
+    Height = 25
+    Top = 1
+    Width = 75
+    Caption = 'Add Word'
+    OnClick = btnAddWordClick
+    TabOrder = 7
   end
 end
