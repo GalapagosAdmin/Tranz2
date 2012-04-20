@@ -52,6 +52,7 @@ Type
   end;                                                                          //@005+
   TTokenStatArray=Array of TSingleTokenStatRec;                                 //@005+
 
+  // Separates a sentence string into individual words (and other tokens).
 Function Tokenize(Const Lang:Tlang; Const Sentence:UTF8string):TTokenList;
 Function TokenizeUTF16(Const Lang:Tlang;
                                       Const Sentence:UnicodeString):TTokenList; //@001+@003=
@@ -70,7 +71,8 @@ Procedure Tuple_1_to_n(Const Lang:TLang;
                        Const InputArray:TStringList;                            //@007+
                        Var OutputArray:TStringList;
                        Const n:Integer);
-// Separates a sentence string into individual words (and other tokens).
+
+// Returns true if the character passed is a known token delimiter
 Function IsTokenDelim(Const C:Char; Const Lang:TLang):Boolean;                  //@007+
 
 // Returns true if the given char is Hiragana                                   //@011+
