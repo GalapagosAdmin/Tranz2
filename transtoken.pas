@@ -17,13 +17,17 @@ Unit TransToken;
 //                           StringList2TokenStatArray
 //@007 2012.01.31 Noah SILVA  Fine-Tuning of token delimiters, filtering.
 //@008 2012.02.06 Noah SILVA  RomajiCheck Function
-//                           NumberCheck Function
-//                           KatakanaCheck Function
-//                           HiraganaCheck Function
-//@009 2012.02.19 Noah SILVA  Compile on Laz 0.9.31/Darwin
+//                            NumberCheck Function
+//                            KatakanaCheck Function
+//                            HiraganaCheck Function
+//@009 2012.02.19 Noah SILVA Compile on Laz 0.9.31/Darwin
 //@010 2012.04.18 Noah SILVA = Moved HiraganaCheck to Interface
 //                           + Added KanaCheck
 //                           + Added KanaMatch
+//@011 2012.04.20 Noah SILVA = Code Clean-up (Result + Exit -> Exit(Result))
+//                           + HiraganaCheck & KatakanaCheck overload versions
+//                             for WideChar.
+//                           + Added KatakanaCheck to Interface
 
 //To-Do:
 // Functions for:
@@ -69,9 +73,18 @@ Procedure Tuple_1_to_n(Const Lang:TLang;
 // Separates a sentence string into individual words (and other tokens).
 Function IsTokenDelim(Const C:Char; Const Lang:TLang):Boolean;                  //@007+
 
+// Returns true if the given char is Hiragana                                   //@011+
+Function HiraganaCheck(Const C:WideChar):Boolean;                               //@011+
 // Returns true if the entire string consists only of Hiragana
 Function HiraganaCheck(Const Str:UnicodeString):Boolean;                        //@008+
-// Returns true is the entire string consists of Romaji (ASCII)
+
+// Returns true if the given char is Hiragana                                   //@011+
+Function KatakanaCheck(Const C:WideChar):Boolean;                               //@011+
+// Returns true if the entire string consists only of Katakana                  //@011+
+Function KatakanaCheck(Const Str:UnicodeString):Boolean;                        //@008+
+
+
+// Returns true if the entire string consists of Romaji (ASCII)
 Function RomajiCheck(Const Str:UTF8String):Boolean;                             //@008+
 
 // Returns true if all kana match in pronunciation
@@ -207,6 +220,18 @@ Function RomajiCheck(Const Str:UTF8String):Boolean;                             
 
   end;
 
+Function KatakanaCheck(Const C:WideChar):Boolean;                               //@011+
+  begin
+    Result := (
+       // First Chance, Main Zenkaku (Full Width) kana range
+            ((C >= KatakanaLow)    and (C <= KatakanaHigh))
+       // Katakana Extensions Block
+         or ((C >= KatakanaExtLow) and (C <= KatakanaExtHigh))
+       // Hankaku (Half-Width)
+         or ((C >= HKKatakanaLow)  and (C <= HKKatakanaHigh))
+               );
+  end;
+
 Function KatakanaCheck(Const Str:UnicodeString):Boolean;                        //@008+
   var
    p:integer;
@@ -229,20 +254,20 @@ Function KatakanaCheck(Const Str:UnicodeString):Boolean;                        
          is_kana := False;
        // Then check extended range, hankaku, etc.
        If NOT is_kana then
-         begin
-           result := False;
-           exit;
-         end;
+         Exit(False);                                                           //@011=
        inc(p);
      end;
-
   end;
 
+Function HiraganaCheck(Const C:WideChar):Boolean;                               //@011+
+  begin
+    Exit(((C >= HiraganaLow) and (C <= HiraganaHigh)));
+  end;
 
 Function HiraganaCheck(Const Str:UnicodeString):Boolean;                        //@008+
   var
-   p:integer;
-   is_kana:Boolean;
+   p:integer;        // current position in the string
+   is_kana:Boolean;  // The current char is a hiragana
   begin
    p := 1;
    Result := True;
@@ -251,18 +276,16 @@ Function HiraganaCheck(Const Str:UnicodeString):Boolean;                        
        // Hiragana range
        is_kana := ((str[p] >= HiraganaLow) and (str[p] <= HiraganaHigh));
        If NOT is_kana then
-         begin
-           result := False;
-           exit;
-         end;
+         Exit(False);                                                           //@011=
        inc(p);
      end;
-
   end;
 
 Function KanaCheck(Const Str:UnicodeString):Boolean;                            //@009+
   begin
-    Result := HiraganaCheck(Str) OR KatakanaCheck(Str);
+    // This will runn faster (on average) if short-circuit boolean eval is
+    // enabled.
+    Result := HiraganaCheck(Str) Or KatakanaCheck(Str);
   end;
 
 // only handles hankaku (ASCII) numbers for now.
@@ -275,11 +298,8 @@ Function NumberCheck(Const Str:UTF8String):Boolean;                             
    Result := True;
    while P <= length(Str) do
      begin
-       If NOT (Str[p] in Romaji) then
-         begin
-           result := False;
-           exit;
-         end;
+       If Not (Str[p] in Romaji) then
+         Exit(False);                                                           //@011=
        inc(p);
      end;
 
@@ -509,7 +529,7 @@ Function TokenizeJA(Const Sentence:UTF8String):TTokenList;                      
   // Returns the offset of the given kana within the range
   // Currentlty the result is quite off, but it is stable, so it works as
   // expected (probably unsigned integer should be used
-  Function KanaOffset(Const C:WideChar):LongWord;                                   //@010+
+  Function KanaOffset(Const C:WideChar):LongWord;                               //@010+
     begin
       If HiraganaCheck(c) then
         Result := LongWord(c) - LongWord(HiraganaMatchLow)
