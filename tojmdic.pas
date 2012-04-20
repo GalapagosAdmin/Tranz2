@@ -4,6 +4,7 @@ unit toJMDic;
 // the & mark removed, as it leads to invalid entities.
 // Modified LGPL License (Static Linking Allowed)
 //@000 2012.02.19 Noah SILVA : Initial Version
+//@001 2012.03.04 Noah SILVA : Add Glosses + cross-ref
 
 
 
@@ -31,6 +32,7 @@ Type
         _reb:UTF8String; // Reading for current entry
         _pos:UTF8String; // part-of-speach for current sense
         _gloss:UTF8String; // Translation gloss for current sense
+        _gloss_lang:STRING; // 3 letter language abbreviation
         _EntryCount:LongInt; // DB entries Added
     Private
       Function LoadFile:Integer;
@@ -74,7 +76,24 @@ Procedure TJMDicExtractor.SaveCurrentEntry;
          TextAdd(Lang, _reb, Mode);
          inc(_EntryCount);
         end;
-    If _EntryCount MOD 100 = 0 then
+    // Add gloss, if English
+    If _gloss <> '' then
+      If not TextCheck('EN', _gloss, Mode) then                                 //@001+
+        begin                                                                   //@001+
+         if (_gloss_lang = 'eng') then
+           begin//@001+
+              TextAdd('EN', _gloss, Mode);                                           //@001+
+              inc(_EntryCount);                                                      //@001+
+              // add cross-reference too
+              // (one way main -> gloss)
+              HashCRAdd(LANG, String2Hash(_keb),                                     //@001+
+                        'EN', string2Hash(_gloss),                                   //@001+
+                        Mode);                                                       //@001+
+           end;
+        end;                                                                    //@001+
+
+    If ((_EntryCount MOD 100) >= 0 )
+    and  ((_EntryCount MOD 100) <= 5 ) then
       SendDebug (IntToStr(_EntryCount) + ' Entries Added');
 
   end;
@@ -133,6 +152,8 @@ procedure TJMDicExtractor.ExtractEntry(Node:TDOMNode);
 //      SendDebug('entry');
       _reb := '';
       _keb := '';
+      _gloss := '';                                                             //@001+
+      _gloss_lang := '';                                                        //@001+
     end;
 
   procedure process_keb_tag;
@@ -162,8 +183,19 @@ procedure TJMDicExtractor.ExtractEntry(Node:TDOMNode);
 
    procedure process_gloss_tag;
    begin
-     _gloss :=   UTF16toUTF8(node.firstchild.NodeValue);
+//     SendDebug(node.Attributes.Item[0].NodeName + '='                           //@001+
+//            + node.Attributes.Item[0].NodeValue                     );          //@001+
 //     SendDebug('gloss = ' + _gloss);
+     if node.Attributes.Item[0].NodeName = 'xml:lang' then                      //@001+
+       begin                                                                    //@001+
+         // only interested in English for now.
+         if node.Attributes.Item[0].NodeValue = 'eng' then                      //@001+
+           begin                                                                //@001+
+         // 3 letter abbreviation
+         _gloss_lang := node.Attributes.Item[0].NodeValue;                      //@001+
+         _gloss :=   UTF16toUTF8(node.firstchild.NodeValue);                    //@001+
+           end;
+       end;                                                                     //@001+
 
    end;
 

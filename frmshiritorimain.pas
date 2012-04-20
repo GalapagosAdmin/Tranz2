@@ -1,9 +1,18 @@
 unit frmShiritoriMain;
-//@000 2012.02.06 Noah SILVA Shiritori Game - Because I can
-
+// Shiritori Game
+//@000 2012.02.06 Noah SILVA : Started
+//@001 2012.04.18 Noah SILVA : Reject Romaji
+//                             TextSearchRandom
+//                             Match Katakana and hiragana
+//                             Disallow words ending in Katakana N for
+//                                user, computer
+// To-Do:
+// 1. Accept Kanji (Look up pronunciation)
+// 3. Random first word
 
 //http://en.wikipedia.org/wiki/Shiritori
 {$mode objfpc}{$H+}
+{$CODEPAGE UTF8}
 
 interface
 
@@ -44,7 +53,9 @@ implementation
 
 { TfrmMain }
 
-uses lazutf8, transdb, transconst;
+uses
+  lazutf8, transdb, transconst,
+  transtoken;                                                                   //@001+
 
 procedure TfrmMain.bbGoClick(Sender: TObject);
 CONST
@@ -58,6 +69,17 @@ var
  Answer:UTF8String;
  Answer16:UnicodeString;
 begin
+
+ // Make sure User's answer isn't English/Romaji
+ If RomajiCheck(ebInput.text) then                                              //@001+
+   begin                                                                        //@001+
+     ShowMessage('回答は平仮名で入力して下さい。');                              //@001+
+     ebinput.Text:= '';                                                         //@001+
+     frmMain.FocusControl(ebInput);                                             //@001+
+     exit;                                                                      //@001+
+   end;                                                                         //@001+
+
+ // Convert to UTF16 for further processing
  Input16 := UTF8toUTF16(ebInput.text);
  Answer16 := UTF8toUTF16(lblWord.Caption);
 
@@ -71,11 +93,12 @@ begin
  // Player loses if their first char doesn't match the computer's last
  // Really, we should accept kanakana or hiragana, and look up pronunciation for
  // kanji.
- If (not (UserFirstChar = ComputerLastChar))
-
+// If (not (UserFirstChar = ComputerLastChar))                                  //@001-
+   If Not KanaMatch(UserFirstChar, ComputerLastChar)                            //@001+
 // Another way to lose is if the player used a word ending in N.
 // katakana N or kanji words ending in N are also not allowed.
- or (UTF16toUTF8(UserLastChar) = 'ん') then
+//    or (UTF16toUTF8(UserLastChar) = 'ん') then                                //@001-
+      or KanaMatch(UTF8toUTF16('ん'), UserLastChar) then                        //@001+
     begin
       acPlayerLoses.Execute;
       exit;
@@ -87,11 +110,13 @@ begin
 
 
  // ShowMessage(UTF16toUTF8(LastChar));
+ // We use the last char of their string as our search string
  SearchString := UTF16toUTF8(UserLastChar) + '%';
+// we don't bother to exclude words ending ん, though we will lose if we
+// draw one of those.
+// We always search for the same type of kana as the user used
 
-
-
- Answer := TextSearch(Lang, SearchString, mdWord);
+  Answer := TextSearchRandom(Lang, SearchString, mdWord);                        //@001+
  If Answer <> '' then
    lblWord.Caption := Answer
  else
@@ -105,7 +130,8 @@ begin
 Answer16 := UTF8toUTF16(Answer);
 // Get last char
 ComputerLastChar := Answer16[Length(Answer16)];
-If UTF16toUTF8(ComputerLastChar) = 'ん' then
+//If UTF16toUTF8(ComputerLastChar) = 'ん' then                                  //@001-
+If KanaMatch(UTF8toUTF16('ん'), ComputerLastChar) then                          //@001+
   begin
     acComputerLoses.Execute;
     exit;

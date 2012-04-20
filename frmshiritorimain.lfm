@@ -1,7 +1,7 @@
 object frmMain: TfrmMain
-  Left = 696
+  Left = 108
   Height = 240
-  Top = 160
+  Top = 396
   Width = 340
   Caption = 'Shiritori'
   ClientHeight = 240

@@ -13,6 +13,7 @@ unit TransConst;
 //@010 2012.01.30 Noah SILVA - Added Single Quote EN
 //@011 2012.01.31 Noah SILVA - Added FancyQuote Constants
 //@012 2012.02.06 Noah SILVA - Added further Unicode Constants
+//@013 2012.04.18 Noah SILVA - Hiragana/Katakana Match codes
 {$mode objfpc}{$H+}
 
 interface
@@ -127,17 +128,19 @@ Type
    ZeroWidthNonJoiner = UnicodeString(#$200C);
    // Zero Width Joiner
    ZeroWidthJoiner = UnicodeString(#$200D);
-   // Word Joiner
+   // Word Joiner - Should be used to separate words (Zero Width)
    WordJoiner = UnicodeString(#$2060);
 
    // Hiragana
    HiraganaLow = UnicodeString(#$3040);
+   HiraganaMatchLow = UnicodeString(#$3041); // Small a                         //@013+
    HiraganaHigh = UnicodeString(#$309F);
 
    // Main Zenkaku (Full Width) Katakana Range
    // Also includes Nakaguro, Chouon, koto
    // Includes Kanji iteration, which could cause us problems
    KatakanaLow = UnicodeString(#$30A0);
+   KatakanaMatchLow = UnicodeString(#$30A1); // Small a                         //@013+
    KatakanaHigh = UnicodeString(#$30FF);
    // [Zankaku] Katakana Phonetic Extensions Range
    KatakanaExtLow = UnicodeString(#$31F0);

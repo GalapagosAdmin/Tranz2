@@ -89,6 +89,7 @@ Unit transdb;
 //@032 2012.02.24 Noah SILVA = Added exception handling to finalization to
 //                             prevent crash due to Zeos 7.0.0 Alpha bug
 //                             Moved more deprecated functions to tdbLegacy
+//@033 2012.04.18 Noah SILVA = TextSearchRandom
 
 // 2011.10.09 Some functions to add for translation project support
 
@@ -354,8 +355,12 @@ uses
                                          Const Count:Integer);                  //@028+
 
   // Search for a certain text string, using LIKE
-  Function TextSearch(Const Lang:TLang; Const Text:UTF8String;                    //@030+
-                                       Const Mode:TMode):UTF8String;              //@030+
+  // finds first match
+  Function TextSearch(Const Lang:TLang; Const Text:UTF8String;                  //@030+
+                                       Const Mode:TMode):UTF8String;            //@030+
+  // finds a random match
+  Function TextSearchRandom(Const Lang:TLang; Const Text:UTF8String;            //@033+
+                                       Const Mode:TMode):UTF8String;            //@033+
 
 
 ResourceString                                                                  //@013+
@@ -1000,6 +1005,42 @@ except
  End; // of TRY..EXCEPT
 end;
 
+Function TextSearchRandom(Const Lang:TLang; Const Text:UTF8String;              //@033+
+                                     Const Mode:TMode):UTF8String;              //@033+
+Const
+  Limit = 500; // This should be determined first
+               // using a SELECT COUNT(*) FROM table WHERE ...
+Var
+ QueryString:String;
+ Table_Name:String;
+ R:LongInt;
+begin
+  R := Random(Limit);
+  Table_Name := GetMainTableName(Mode);
+  Query.Params.Clear;
+  QueryString := 'select text from '+ table_name + ' where text LIKE :text'
+   + ' LIMIT ' + IntToStr(R) + ', 1';
+  query.SQL.Text := QueryString;
+  Query.ParamByName('text').AsString := Text;
+
+  TRY
+    query.open;
+// this should only return one result
+//    while not query.EOF do
+    Case Query.EOF of
+      False: Result := query.FieldByName('text').AsString; // There are results, return success
+      True:  Result := ''; // No results found, return failure
+    end; // of CASE
+    Query.Close;
+except
+ on E: Exception do
+   begin
+     LastErrorMessage := e.message;
+     SendDebug('transdb.TextSearch ' + rsException + e.message);
+     RESULT := '';
+   end;
+ End; // of TRY..EXCEPT
+end;
 
 
 Function TextDelete(Const lang:TLang; Const Text:UTF8String;                    //@009+

@@ -21,6 +21,20 @@ Unit TransToken;
 //                           KatakanaCheck Function
 //                           HiraganaCheck Function
 //@009 2012.02.19 Noah SILVA  Compile on Laz 0.9.31/Darwin
+//@010 2012.04.18 Noah SILVA = Moved HiraganaCheck to Interface
+//                           + Added KanaCheck
+//                           + Added KanaMatch
+
+//To-Do:
+// Functions for:
+// Zenkaku to Hankaku (Romaji, Numbers)
+// Hankaku to Zenkaku (Romaji, Numbers)
+// Normalizing Kana to pre-composed, zenkaku form
+// Hiragana to Katakana
+// Katakana to Hiragana
+// Romaji to Hiragana, Katakana
+// Hiragana, Katakana to Romaji
+
 interface
 
 uses
@@ -52,10 +66,17 @@ Procedure Tuple_1_to_n(Const Lang:TLang;
                        Const InputArray:TStringList;                            //@007+
                        Var OutputArray:TStringList;
                        Const n:Integer);
+// Separates a sentence string into individual words (and other tokens).
 Function IsTokenDelim(Const C:Char; Const Lang:TLang):Boolean;                  //@007+
 
+// Returns true if the entire string consists only of Hiragana
+Function HiraganaCheck(Const Str:UnicodeString):Boolean;                        //@008+
+// Returns true is the entire string consists of Romaji (ASCII)
+Function RomajiCheck(Const Str:UTF8String):Boolean;                             //@008+
 
-// Separates a sentence string into individual words (and other tokens).
+// Returns true if all kana match in pronunciation
+Function KanaMatch(Const Str1, Str2:UnicodeString):Boolean;                     //@010+
+Function KanaMatch(Const Str1, Str2:UTF8String):Boolean;                        //@010+
 
 implementation
 
@@ -166,6 +187,7 @@ Function IsTokenDelim(Const C:Char; Const Lang:TLang):Boolean;                  
 // Checks in input string to see if it is entirely composed of Romaji
 // Should use LazUTF8 routines or convert the string to UTF16 prior to
 // processing, but in this special case, it would seem not to be necessary.
+// Reason: UTF8 bytes 2-4 guaranteed not to be ASCII
 Function RomajiCheck(Const Str:UTF8String):Boolean;                             //@008+
   var
    p:integer;
@@ -236,6 +258,11 @@ Function HiraganaCheck(Const Str:UnicodeString):Boolean;                        
        inc(p);
      end;
 
+  end;
+
+Function KanaCheck(Const Str:UnicodeString):Boolean;                            //@009+
+  begin
+    Result := HiraganaCheck(Str) OR KatakanaCheck(Str);
   end;
 
 // only handles hankaku (ASCII) numbers for now.
@@ -379,12 +406,12 @@ Function TokenizeJA(Const Sentence:UnicodeString):TTokenList;                   
 // 5. Dictionary search
  end; // of FUNCTION
 
-Function TokenizeJA(const sentence:UTF8String):TTokenList;                      //@001+
+Function TokenizeJA(Const Sentence:UTF8String):TTokenList;                      //@001+
   begin
-    Result := TokenizeJA(UTF8toUTF16(sentence));
+    Result := TokenizeJA(UTF8toUTF16(Sentence));
   end;
 
- Function TokenizeUTF16(Const Lang:Tlang; Const Sentence:UnicodeString):TTokenList;  //@001=@003=
+ Function TokenizeUTF16(Const Lang:TLang; Const Sentence:UnicodeString):TTokenList;  //@001=@003=
  begin
  // We can always check the second character later if there are collissions
    try                                                                          //@001+
@@ -402,7 +429,8 @@ Function TokenizeJA(const sentence:UTF8String):TTokenList;                      
  end; // of FUNCTION
 
 
- Function Tokenize(Const Lang:Tlang; Const Sentence:UTF8String):TTokenList; Overload;    //@001+
+ Function Tokenize(Const Lang:Tlang; Const Sentence:UTF8String):TTokenList;     //@001+
+                                                                   Overload;    //@001+
  //  var
  //   Sentence_utf16:UTF16String;
    Begin
@@ -478,8 +506,77 @@ Function TokenizeJA(const sentence:UTF8String):TTokenList;                      
       end;
   end;
 
+  // Returns the offset of the given kana within the range
+  // Currentlty the result is quite off, but it is stable, so it works as
+  // expected (probably unsigned integer should be used
+  Function KanaOffset(Const C:WideChar):LongWord;                                   //@010+
+    begin
+      If HiraganaCheck(c) then
+        Result := LongWord(c) - LongWord(HiraganaMatchLow)
+      else if KatakanaCheck(c) then
+        Result := LongWord(c) - LongWord(KatakanaMatchLow)
+      else
+        raise Exception.create('Invalid Kana Input.');
+    end;
 
+  // Matches two WideChars.  To return true, they must meet one of the following
+  // conditions:
+  // 1. They must be the same Unicode Character
+  // 2. They must both either hiragana or katakana, and represent the
+  //    corrosponding char in the other set.
 
+  // We don't handle
+  // 1. Cho-on (Long vowels created by Japanese dash char)
+  // 2. Extended katakana (Since there are no equivalent Hirakana)
+  // 3. Upper/Lower case romaji equivilence
+  // 4. Matching Kanji to kana
+  // 5. Non-precomposed chars (i.e. separate dakuon char)
+  Function KanaMatchChar(Const c1, c2:WideChar):Boolean;                        //@010+
+    var
+      Offset1 : LongInt;
+      Offset2 : LongInt;
+    begin
+      // First check for exact match
+      If C1 = C2 then Exit(True);
+      // No exact match, Check to make sure they are both Kana
+      If  Not ( KanaCheck(C1) and KanaCheck(C2) ) then
+        // If not, exit with mismatch.
+        Exit(False);
+      // We Know: Not same char, both kana
+      Offset1 := KanaOffset(c1);
+      Offset2 := KanaOffset(c1);
+      // See if they have the same offset in their range
+      If Offset1 = Offset2 then
+        Result := True
+     else
+        Result := False;
+    end;
+
+  Function KanaMatch(Const Str1, Str2:UnicodeString):Boolean;                   //@010+
+    var
+      l1, l2:Longint; // Length of String
+      p:Longint; // Current Position in the string
+    begin
+      l1 := Length(Str1);
+      l2 := Length(Str2);
+      // Length must match
+      If l1 <> l2 then Exit(False);
+      // Length matches, check chars
+      p := 1;
+      While p <= l1 do
+       begin
+         If not KanaMatchChar(Str1[p], Str2[p]) then
+           Exit(False);
+         Inc(p);
+       end;  // of WHILE
+      // If we made it this far, then everything matches
+      Result := True;
+    end; // of FUNCTION
+
+  Function KanaMatch(Const Str1, Str2:UTF8String):Boolean;                      //@010+
+    begin
+      Result := KanaMatch(UTF8toUTF16(Str2), UTF8toUTF16(Str2));
+    end;
 
 end.
 
