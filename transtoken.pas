@@ -2,6 +2,7 @@ Unit TransToken;
 // Translation Tokenizer Routines  / Part of the Tranz2 Suite
 // Separates strings (containing sentences, etc.) into tokens (Words, etc.)
 
+// Copyright 2009-2012 Noah SILVA / Galapagos Software
 
 {$mode objfpc}{$H+}
 //@000 2009.??.?? Noah SILVA  Initial Version
@@ -27,6 +28,9 @@ Unit TransToken;
 //                           + HiraganaCheck & KatakanaCheck overload versions
 //                             for WideChar.
 //                           + Added KatakanaCheck to Interface
+//@012 2012.04.21 Noah SILVA + CharInSet
+//                           = Defect Fix for KanaMatch UTF8 overload
+//                           = Convert KanaOffset() from typecasting to Ord()
 
 //To-Do:
 // Functions for:
@@ -106,6 +110,11 @@ Uses
   , TransTokenRemix                                                             //@007+
  //  , LazUTF8    // in lclproc?                                                //@008+@009-
   ;
+
+Function CharInSet(Const C:WideChar; Const CharSet: TSysCharSet):Boolean;       //@012+
+ begin
+   Result := C in CharSet;
+ end;
 
 Procedure AddTokenJA(Const Token:UnicodeString; Var WIP:TTokenList);            //@001+
 //Procedure AddTokenJA(const token:UTF8string; var wip:TTokenList);             //@001-
@@ -195,7 +204,7 @@ Function IsTokenDelim(Const C:Char; Const Lang:TLang):Boolean;                  
     // Delims should be loaded from DB, only supports ASCII as of now
     Delims := [' ','"', '(', ')', ':', ';', '.', CommaEN, '[', ']', '/',        //@006+
                '@', '~', '?', '!', Chr($0d), Chr($0a)];//'“','”'                //@007+
-    Result :=  (C IN Delims);
+    Result :=  CharInSet(C, Delims);                                            //@012=
   end;
 
 // Checks in input string to see if it is entirely composed of Romaji
@@ -299,7 +308,7 @@ Function NumberCheck(Const Str:UTF8String):Boolean;                             
    Result := True;
    while P <= length(Str) do
      begin
-       If Not (Str[p] in Romaji) then
+       If Not CharInSet(Str[p], Romaji) then                                    //@012=
          Exit(False);                                                           //@011=
        inc(p);
      end;
@@ -533,9 +542,11 @@ Function TokenizeJA(Const Sentence:UTF8String):TTokenList;                      
   Function KanaOffset(Const C:WideChar):LongWord;                               //@010+
     begin
       If HiraganaCheck(c) then
-        Result := LongWord(c) - LongWord(HiraganaMatchLow)
+//        Result := LongWord(c) - LongWord(HiraganaMatchLow)                    //@012-
+        Result := Ord(c) - Ord(HiraganaMatchLow)                                //@012+
       else if KatakanaCheck(c) then
-        Result := LongWord(c) - LongWord(KatakanaMatchLow)
+//        Result := LongWord(c) - LongWord(KatakanaMatchLow)                    //@012-
+        Result := Ord(c) - Ord(KatakanaMatchLow)                                //@012+
       else
         raise Exception.create('Invalid Kana Input.');
     end;
@@ -596,7 +607,8 @@ Function TokenizeJA(Const Sentence:UTF8String):TTokenList;                      
 
   Function KanaMatch(Const Str1, Str2:UTF8String):Boolean;                      //@010+
     begin
-      Result := KanaMatch(UTF8toUTF16(Str2), UTF8toUTF16(Str2));
+      Result := KanaMatch(UTF8toUTF16(Str1), UTF8toUTF16(Str2));                //@012=
     end;
 
 end.
+
