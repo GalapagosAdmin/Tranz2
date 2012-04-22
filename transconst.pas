@@ -14,6 +14,8 @@ unit TransConst;
 //@011 2012.01.31 Noah SILVA - Added FancyQuote Constants
 //@012 2012.02.06 Noah SILVA - Added further Unicode Constants
 //@013 2012.04.18 Noah SILVA - Hiragana/Katakana Match codes
+//@014 2012.04.21 Noah SILVA - Convert Kana Match codes to WideChar (for Ord())
+
 {$mode objfpc}{$H+}
 
 interface
@@ -133,14 +135,14 @@ Type
 
    // Hiragana
    HiraganaLow = UnicodeString(#$3040);
-   HiraganaMatchLow = UnicodeString(#$3041); // Small a                         //@013+
+   HiraganaMatchLow = WideChar(#$3041); // Small a                              //@013+@014=
    HiraganaHigh = UnicodeString(#$309F);
 
    // Main Zenkaku (Full Width) Katakana Range
    // Also includes Nakaguro, Chouon, koto
    // Includes Kanji iteration, which could cause us problems
    KatakanaLow = UnicodeString(#$30A0);
-   KatakanaMatchLow = UnicodeString(#$30A1); // Small a                         //@013+
+   KatakanaMatchLow = WideChar(#$30A1); // Small a                              //@013+@014=
    KatakanaHigh = UnicodeString(#$30FF);
    // [Zankaku] Katakana Phonetic Extensions Range
    KatakanaExtLow = UnicodeString(#$31F0);
@@ -179,4 +181,4 @@ Type
 implementation
 
 end.
-
+

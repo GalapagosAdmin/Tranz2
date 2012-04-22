@@ -2,7 +2,6 @@ Unit TransToken;
 // Translation Tokenizer Routines  / Part of the Tranz2 Suite
 // Separates strings (containing sentences, etc.) into tokens (Words, etc.)
 
-// Copyright 2009-2012 Noah SILVA / Galapagos Software
 
 {$mode objfpc}{$H+}
 //@000 2009.??.?? Noah SILVA  Initial Version
@@ -601,4 +600,3 @@ Function TokenizeJA(Const Sentence:UTF8String):TTokenList;                      
     end;
 
 end.
-
